@@ -1,0 +1,415 @@
+{
+  "meta": {
+    "locale": "en",
+    "dir": "ltr"
+  },
+  "nav": {
+    "chiSono": "About",
+    "servizi": "Services",
+    "mutui": "Mortgages",
+    "faq": "FAQ",
+    "contatti": "Contact",
+    "cta": "Quote",
+    "ctaFull": "Get your quote",
+    "skipToContent": "Skip to content",
+    "whatsapp": "WhatsApp",
+    "call": "Call",
+    "menu": "Menu",
+    "close": "Close"
+  },
+  "hero": {
+    "eyebrow": "Credit Broker · Credipass Partner",
+    "title": "Riccardo Dettori",
+    "titleAccent": "your expert in financing and credit.",
+    "subtitle": "I find the right loan for you. Not the easiest one to sell — the one that saves you the most money, on clear terms, with no pressure.",
+    "ctaPrimary": "Get a free quote",
+    "ctaSecondary": "About me",
+    "ctaTertiary": "Message me on WhatsApp",
+    "trustBadges": {
+      "oam": "OAM-certified",
+      "credipass": "Credipass partner",
+      "free": "Free consultation"
+    },
+    "imageAlt": "Riccardo Dettori, Credipass credit broker",
+    "scrollHint": "See how I can help"
+  },
+  "stats": {
+    "eyebrow": "A profession measured in outcomes",
+    "title": "Real numbers, not slogans.",
+    "intro": "Every file is a family, a project, a dream made affordable.",
+    "items": [
+      { "value": 350,    "format": "+",   "label": "Families helped" },
+      { "value": 90,     "format": "€M",  "label": "In financing arranged" },
+      { "value": 18000,  "format": "€",   "label": "Average client savings" },
+      { "value": 12,     "format": "",    "label": "Years of experience" }
+    ],
+    "disclaimer": "Indicative figures — will be updated with certified data from the practice."
+  },
+  "values": {
+    "eyebrow": "Why work with a credit broker",
+    "title": "Two non-negotiable principles.",
+    "items": [
+      {
+        "title": "Full transparency",
+        "body": "I work for you, not the bank. As an OAM-registered broker, the law requires me to show you costs, commissions and clauses of every option in writing.",
+        "highlight": "0 hidden fees"
+      },
+      {
+        "title": "Concrete results",
+        "body": "Real-time access to 40+ Credipass partner banks. APR, spread, term, refinancing and clauses compared transparently. Continuous Credipass Academy training.",
+        "highlight": "40+ banks"
+      }
+    ]
+  },
+  "services": {
+    "eyebrow": "Services",
+    "title": "All the credit you need — from one trusted person.",
+    "subtitle": "Families, professionals, businesses: every need has a structured solution.",
+    "openDetail": "Learn more",
+    "closeDetail": "Close",
+    "swipeHint": "Swipe to see all services",
+    "items": [
+      {
+        "id": "prestiti",
+        "title": "Personal Loans",
+        "body": "Liquidity for your projects, with sustainable instalments and fast approval.",
+        "detail": "For needs up to €75,000, with terms from 24 to 120 months. I compare offers across all partner banks to find the best APR for your profile. Decision in 24-72 hours, typical disbursement within 7 days of signing."
+      },
+      {
+        "id": "mutui",
+        "title": "Home Mortgages",
+        "body": "Primary residence, second home, renovation, refinancing. Real comparison across 40+ banks.",
+        "detail": "From pre-qualification through to the notary deed: I guide you step by step. APR, spread, term and LTV compared across every partner bank. Fixed, variable or hybrid rate based on your risk profile. Up to 100% LTV for first-home under-36 borrowers."
+      },
+      {
+        "id": "quinto",
+        "title": "Salary-Backed Loans",
+        "body": "For employees and pensioners: instalment deducted at source, no guarantors needed.",
+        "detail": "The instalment is withheld directly by the employer or pension fund, up to 20% of net monthly income. No guarantors, no complex checks: a stable employment relationship is enough. Term up to 120 months."
+      },
+      {
+        "id": "imprese",
+        "title": "Business Advisory",
+        "body": "Unsecured loans, leasing, factoring and credit lines for your activity.",
+        "detail": "Analysis of your financial structure and identification of the most effective credit solution: unsecured loans up to 7 years, equipment and real-estate leasing, recourse or non-recourse factoring, invoice advances. Access to public tenders and MCC guarantee fund."
+      },
+      {
+        "id": "rischi",
+        "title": "Risk Analysis",
+        "body": "Preventive credit-bureau check and feasibility study before filing the bank application.",
+        "detail": "Before sending any application, I run a preventive credit check (Crif, CTC, Experian) to avoid filings that would surely be rejected — each recorded rejection worsens your profile. If there are issues, we work on remediation first."
+      },
+      {
+        "id": "immobiliare",
+        "title": "Real Estate Negotiation",
+        "body": "I support you in price negotiation and notary timing.",
+        "detail": "Property market-value analysis, support in drafting the purchase offer, management of bank approval timing, and coordination with notary and estate agent to reach the deed without surprises."
+      },
+      {
+        "id": "agevolato",
+        "title": "Subsidised Mortgages",
+        "body": "Consap guarantee, first-home under-36, young couples fund: I tell you instantly if you qualify.",
+        "detail": "Several public-subsidy tools exist: Consap First-Home Fund (state guarantee up to 50%), Young Couples Fund, Rent Support Fund. In 5 minutes I verify whether you meet income/age requirements and which combination is most advantageous."
+      },
+      {
+        "id": "famiglia",
+        "title": "Family Financing",
+        "body": "Cars, education, renovation: we plan together what works best.",
+        "detail": "Often a small targeted loan beats a large mortgage. We analyse the concrete need (car purchase, university studies, home renovation) and pick the cheapest tool: purpose-tied loan, liquidity mortgage or consolidation."
+      },
+      {
+        "id": "b2b",
+        "title": "B2B / Professional Credit",
+        "body": "Invoice advances, shareholder loans, self-employed financing: dedicated solutions.",
+        "detail": "For freelancers and sole proprietorships: dedicated loans based on declared income, invoice advances to manage public-sector payment delays, equipment leasing with tax deduction, shareholder loans at favourable rates."
+      }
+    ]
+  },
+  "mutui": {
+    "eyebrow": "Mortgage products",
+    "title": "The right mortgage for every chapter of your life.",
+    "subtitle": "Five solutions, one priority: an instalment that genuinely fits your budget.",
+    "ctaCalcola": "Calculate instalment",
+    "recommended": "Most requested",
+    "swipeHint": "Swipe to see all options",
+    "items": [
+      {
+        "id": "pass",
+        "title": "Pass Mortgage",
+        "shortTitle": "Pre-qualification",
+        "tagline": "Know your budget before you start house-hunting.",
+        "body": "Before you even find a property, you know exactly how much the bank is willing to lend you. Enter negotiations with a certain budget and stronger leverage.",
+        "bullets": [
+          "Bank pre-approval in 48–72 hours",
+          "90-day validity, renewable",
+          "No cost, no obligation"
+        ]
+      },
+      {
+        "id": "prima-seconda",
+        "title": "Primary or Second Home",
+        "shortTitle": "Purchase",
+        "tagline": "The most requested product: 40+ banks compared.",
+        "body": "I compare in real time the rates of 40+ banks to find the combination of nominal rate, spread and term that minimises the total cost of your mortgage.",
+        "bullets": [
+          "Fixed, variable or hybrid rate",
+          "Up to 100% LTV for under-36 borrowers",
+          "Full assistance through to the notary deed"
+        ],
+        "recommended": true
+      },
+      {
+        "id": "ristrutturazione",
+        "title": "Renovation Mortgage",
+        "shortTitle": "Renovation",
+        "tagline": "Liquidity for works, paired with Ecobonus & Sismabonus.",
+        "body": "Liquidity to upgrade your home, fully leveraging Ecobonus, Sismabonus and Building Bonus. I calculate the optimal fiscal integration.",
+        "bullets": [
+          "Disbursement aligned with works progress",
+          "Compatible with tax deductions",
+          "Practical and fiscal advisory included"
+        ]
+      },
+      {
+        "id": "surroga",
+        "title": "Refinancing (Surroga)",
+        "shortTitle": "Savings",
+        "tagline": "Switch banks at zero cost, save on the instalment.",
+        "body": "Free transfer of your mortgage to another bank with better terms. Italian Bersani Law makes it cost-free — I tell you whether it actually pays off.",
+        "bullets": [
+          "Current APR vs new offers comparison",
+          "Total costs borne by the new bank",
+          "Average client saving: €18,000+"
+        ]
+      },
+      {
+        "id": "consolidamento",
+        "title": "Debt Consolidation",
+        "shortTitle": "One instalment",
+        "tagline": "Multiple loans become a single, sustainable one.",
+        "body": "Merge multiple loans into a single sustainable instalment, reducing monthly effort and simplifying your household finances.",
+        "bullets": [
+          "One instalment, longer term",
+          "Option to add fresh liquidity",
+          "Improves credit standing over time"
+        ]
+      }
+    ]
+  },
+  "authority": {
+    "eyebrow": "Authority & trust",
+    "title": "Why you can rely on a credit broker.",
+    "intro": "A credit broker is registered with a public roll, bound by strict regulatory duties that protect you — not the bank.",
+    "badges": [
+      {
+        "title": "OAM Registration",
+        "subtitle": "Brokers Roll no. [OAM NUMBER]",
+        "body": "Public authority supervised by the Bank of Italy that certifies and audits the profession.",
+        "weight": "secondary"
+      },
+      {
+        "title": "Credipass Partner",
+        "subtitle": "Official national network",
+        "body": "One of Italy's leading credit-brokerage networks, with 40+ partner institutions and thousands of certified advisors.",
+        "weight": "primary"
+      },
+      {
+        "title": "Credipass Academy",
+        "subtitle": "Certified continuous training",
+        "body": "Mandatory annual regulatory, fiscal and product training.",
+        "weight": "secondary"
+      }
+    ],
+    "whyTitle": "Why rely on a credit broker?",
+    "whyBullets": [
+      { "highlight": "Independence", "body": "I don't push a single bank's product — I pick the best one for you across 40+" },
+      { "highlight": "Time", "body": "I handle the process for you, from paperwork to approval" },
+      { "highlight": "Savings", "body": "my fee is only on success, and almost always outweighed by the better rate secured" },
+      { "highlight": "Transparency", "body": "everything is OAM-regulated and contractually documented" }
+    ]
+  },
+  "chiSono": {
+    "eyebrow": "About me",
+    "title": "A person first, a professional second.",
+    "shortIntro": "For over a decade I've helped Sardinian families and entrepreneurs access credit at the best market conditions.",
+    "highlights": [
+      { "value": "12 years", "label": "In the credit market" },
+      { "value": "Sardinia", "label": "Primary area of activity" },
+      { "value": "OAM ✓", "label": "Registered with the national roll" }
+    ],
+    "body": [
+      "My name is Riccardo Dettori and for over a decade I've helped Sardinian families and entrepreneurs access credit at the best market conditions.",
+      "I work as a credit broker partnered with Credipass, one of Italy's most structured networks, with direct access to 40+ banking institutions. I'm registered with the OAM (the Italian Roll of Agents and Brokers) and complete the mandatory Credipass Academy training every year.",
+      "What sets me apart isn't how many banks I work with — it's the time I take to listen before proposing. A mortgage lasts 20 or 30 years: it's worth starting well."
+    ],
+    "readMore": "Read my full story",
+    "contactsTitle": "Talk to me directly",
+    "labels": {
+      "phone": "Phone",
+      "email": "Email",
+      "hours": "Hours"
+    },
+    "imageAlt": "Photo of Riccardo Dettori"
+  },
+  "faq": {
+    "eyebrow": "Frequently asked",
+    "title": "Real answers to the questions everyone asks me.",
+    "subtitle": "If you can't find what you're looking for, drop me a line — I reply personally within 24 hours.",
+    "categories": {
+      "costi": "Costs",
+      "tempi": "Timing",
+      "requisiti": "Eligibility",
+      "procedura": "Process"
+    },
+    "items": [
+      {
+        "cat": "costi",
+        "q": "How much does a credit broker cost?",
+        "a": "For **property mortgages** the broker's fee is almost always **fully paid by the chosen bank**, meaning it's free for you. For other loans, any client-side fee must be disclosed in writing before signing — that's OAM law."
+      },
+      {
+        "cat": "tempi",
+        "q": "Can I apply for a mortgage before finding a property?",
+        "a": "Yes, with the **Pass Mortgage**. It's a bank pre-qualification that tells you within **48–72 hours** how much the bank is willing to lend you. You enter negotiations with a certain budget, and estate agents take you more seriously."
+      },
+      {
+        "cat": "procedura",
+        "q": "What's the difference between a credit broker and a financial advisor?",
+        "a": "A financial advisor invests your wealth (stocks, funds, insurance). A credit broker helps you obtain financing (mortgages, loans, leasing). They are two separate registrations on two distinct rolls. I'm only registered with **OAM**, the credit brokers roll."
+      },
+      {
+        "cat": "tempi",
+        "q": "How long does it take to get a mortgage?",
+        "a": "Once your documentation is complete, **pre-approval arrives in 48–72 hours**. The full approval, following the property appraisal, takes **30–45 days**. The notary deed can be signed within **60 days** of application if everything stays on schedule."
+      },
+      {
+        "cat": "requisiti",
+        "q": "Can I get a mortgage if I'm young or on a fixed-term contract?",
+        "a": "Often, yes. Public guarantee funds (**Consap**, Young Couples Fund) cover up to **50% of the loan for under-36 applicants**. For fixed-term contracts, some banks evaluate professional continuity beyond just permanent positions. Let's check whether you qualify together."
+      },
+      {
+        "cat": "costi",
+        "q": "Is mortgage refinancing really free?",
+        "a": "Yes — since Italy's **2007 Bersani Law**, all refinancing costs are borne by the new bank: appraisal, notary, processing, taxes. You change bank and get a better rate without spending a euro. It's worth doing when the APR difference exceeds **0.5–0.7 percentage points**."
+      },
+      {
+        "cat": "procedura",
+        "q": "What do I need to start? Which documents should I prepare?",
+        "a": "For the first consultation a call is enough: we talk about your situation and I tell you on the spot if and how it's feasible. Then you'll need: ID, tax code, last 2 payslips (or last 2 tax returns if self-employed), CU, recent bank statements. For mortgages: also the preliminary contract or purchase offer."
+      },
+      {
+        "cat": "procedura",
+        "q": "Do you work only in Sardinia, or across Italy?",
+        "a": "I work mainly in Sardinia but can follow cases anywhere in Italy, because the Credipass network is national. The consultation can take place in person, by video call or by phone — your choice."
+      }
+    ]
+  },
+  "testimonials": {
+    "eyebrow": "People I've helped",
+    "title": "What my clients say.",
+    "subtitle": "Real testimonials, collected after closing. Initials only for privacy.",
+    "swipeHint": "Swipe for more reviews",
+    "items": [
+      {
+        "stars": 5,
+        "name": "Marco T.",
+        "role": "Client · Cagliari",
+        "date": "March 2025",
+        "body": "I already had a mortgage; Riccardo found me a refinancing deal saving €240/month. Clear explanations, zero pressure. He's one of those people who make a complicated thing feel simple."
+      },
+      {
+        "stars": 5,
+        "name": "Giulia & Andrea",
+        "role": "Couple under 36 · Olbia",
+        "date": "January 2025",
+        "body": "We thought we couldn't afford it. Riccardo found us a subsidised Consap mortgage covering 100% of the value. He guided us step by step until the deed, always available even in the evening."
+      },
+      {
+        "stars": 5,
+        "name": "Studio L.",
+        "role": "Entrepreneur · Sassari",
+        "date": "November 2024",
+        "body": "I needed liquidity to invest in my business. He structured an unsecured loan on terms my long-time bank hadn't even shown me. A true professional."
+      },
+      {
+        "stars": 5,
+        "name": "Family M.",
+        "role": "First-home buyer · Alghero",
+        "date": "September 2024",
+        "body": "Pre-qualification in 48 hours, which let us negotiate the price with confidence. The notary deed landed exactly on schedule. Completely free consultation."
+      }
+    ]
+  },
+  "ctaFinal": {
+    "eyebrow": "Get started",
+    "title": "Find the right mortgage for you.",
+    "titleAccent": "Free, in 60 seconds.",
+    "body": "No cost, no pressure. Enter a few details on the Credipass portal and receive a personalised estimate. Then, if you like, we talk it through together.",
+    "ctaPrimary": "Calculate your quote →",
+    "ctaSecondaryTitle": "Prefer to talk first?",
+    "ctaCall": "Call me",
+    "ctaWhatsapp": "Message me on WhatsApp",
+    "guarantee": "Always free consultation · No obligation · Reply within 24h"
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Let's talk.",
+    "subtitle": "Write here or contact me directly. I reply personally within 24 business hours.",
+    "form": {
+      "name": "Full name",
+      "namePlaceholder": "e.g. Marco Rossi",
+      "email": "Email",
+      "emailPlaceholder": "name@example.com",
+      "phone": "Phone",
+      "phonePlaceholder": "e.g. +39 333 1234567",
+      "topic": "Type of request",
+      "topicOptions": [
+        "Primary-home mortgage",
+        "Mortgage refinancing",
+        "Personal loan",
+        "Salary-backed loan",
+        "Business financing",
+        "Not sure yet",
+        "Other"
+      ],
+      "message": "Message",
+      "messagePlaceholder": "Tell me briefly about your situation…",
+      "privacyBefore": "I have read and accept the ",
+      "privacyLink": "privacy policy",
+      "privacyAfter": "",
+      "submit": "Send request",
+      "submitting": "Sending…",
+      "success": "Thank you! I'll reply within 24 business hours.",
+      "error": "Something went wrong. Please try again or email me directly.",
+      "fallbackTitle": "Form not yet configured",
+      "fallbackBody": "Contact me directly — I'll reply much faster:",
+      "fallbackEmail": "Send an email",
+      "fallbackWhatsapp": "WhatsApp chat"
+    },
+    "infoTitle": "Or contact me directly"
+  },
+  "footer": {
+    "tagline": "Credit broker · Credipass partner · Sardinia",
+    "quickLinks": "Quick links",
+    "legal": "Legal information",
+    "language": "Language",
+    "privacy": "Privacy Policy",
+    "cookies": "Cookie Policy",
+    "vat": "VAT no.",
+    "oam": "OAM Registration",
+    "credits": "All rights reserved.",
+    "disclaimer": "Personal site of Riccardo Dettori, credit broker partnered with Credipass. The financial conditions illustrated are indicative and subject to the lender's approval."
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "subtitle": "Notice pursuant to EU Regulation 2016/679 (GDPR).",
+    "body": [
+      { "h": "Data controller", "p": "Riccardo Dettori, VAT no. [VAT], acting as credit broker partnered with Credipass." },
+      { "h": "Data collected", "p": "Through the contact form we collect name, email, phone, type of request and message. All fields are voluntary." },
+      { "h": "Purpose", "p": "Data is used exclusively to respond to your request and provide credit advisory services. It is not shared with third parties and is not used for marketing without explicit consent." },
+      { "h": "Retention", "p": "Data is retained only as long as needed to handle your request, and in any case no longer than 24 months unless required by law." },
+      { "h": "Your rights", "p": "You can at any time request access, correction, deletion or restriction of your data by writing to riccardo.dettori@credipass.it." }
+    ],
+    "back": "Back to home"
+  }
+}

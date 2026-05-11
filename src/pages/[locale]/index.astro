@@ -1,0 +1,47 @@
+---
+import { LOCALES, type Locale } from '../../config/i18n';
+import { getDictionary } from '../../utils/i18n';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Hero from '../../components/Hero.astro';
+import CounterStats from '../../components/CounterStats.astro';
+import ValueProps from '../../components/ValueProps.astro';
+import ServiceGrid from '../../components/ServiceGrid.astro';
+import MutuiTabs from '../../components/MutuiTabs.astro';
+import TrustAuthority from '../../components/TrustAuthority.astro';
+import ChiSono from '../../components/ChiSono.astro';
+import FAQ from '../../components/FAQ.astro';
+import Testimonials from '../../components/Testimonials.astro';
+import CTAFinal from '../../components/CTAFinal.astro';
+import ContactForm from '../../components/ContactForm.astro';
+import Footer from '../../components/Footer.astro';
+import MobileBottomBar from '../../components/MobileBottomBar.astro';
+
+export function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+const t = getDictionary(locale);
+
+const faqJsonLd = t.faq.items.map((i) => ({ question: i.q, answer: i.a }));
+---
+
+<BaseLayout locale={locale} pageKey="home" pathSuffix="" faqJsonLd={faqJsonLd}>
+  <Navbar locale={locale} />
+  <main id="main">
+    <Hero locale={locale} />
+    <CounterStats locale={locale} />
+    <ValueProps locale={locale} />
+    <ServiceGrid locale={locale} />
+    <MutuiTabs locale={locale} />
+    <TrustAuthority locale={locale} />
+    <ChiSono locale={locale} />
+    <FAQ locale={locale} />
+    <Testimonials locale={locale} />
+    <CTAFinal locale={locale} />
+    <ContactForm locale={locale} />
+  </main>
+  <Footer locale={locale} />
+  <MobileBottomBar locale={locale} />
+</BaseLayout>

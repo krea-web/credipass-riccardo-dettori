@@ -1,0 +1,11 @@
+{
+  "name": "Riccardo Dettori – Mediatore Creditizio Credipass",
+  "short_name": "RD Credipass",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ],
+  "theme_color": "#1B2D55",
+  "background_color": "#F8F7F4",
+  "display": "standalone",
+  "start_url": "/it/"
+}

@@ -1,0 +1,415 @@
+{
+  "meta": {
+    "locale": "it",
+    "dir": "ltr"
+  },
+  "nav": {
+    "chiSono": "Chi sono",
+    "servizi": "Servizi",
+    "mutui": "Mutui",
+    "faq": "Domande",
+    "contatti": "Contatti",
+    "cta": "Preventivo",
+    "ctaFull": "Calcola il tuo mutuo",
+    "skipToContent": "Vai al contenuto",
+    "whatsapp": "WhatsApp",
+    "call": "Chiama",
+    "menu": "Menu",
+    "close": "Chiudi"
+  },
+  "hero": {
+    "eyebrow": "Mediatore Creditizio · Affiliato Credipass",
+    "title": "Riccardo Dettori",
+    "titleAccent": "esperto in finanziamenti e crediti.",
+    "subtitle": "Trovo il finanziamento giusto per te. Non quello più facile da vendere: quello che ti fa risparmiare di più, a condizioni chiare e senza pressioni.",
+    "ctaPrimary": "Fai il preventivo gratis",
+    "ctaSecondary": "Scopri chi sono",
+    "ctaTertiary": "Scrivimi su WhatsApp",
+    "trustBadges": {
+      "oam": "Iscrizione OAM",
+      "credipass": "Affiliato Credipass",
+      "free": "Consulenza gratuita"
+    },
+    "imageAlt": "Riccardo Dettori, mediatore creditizio Credipass",
+    "scrollHint": "Scopri come ti aiuto"
+  },
+  "stats": {
+    "eyebrow": "Una professione misurata in risultati",
+    "title": "Numeri reali, non slogan.",
+    "intro": "Ogni pratica è una famiglia, un progetto, un sogno che diventa accessibile.",
+    "items": [
+      { "value": 350,    "format": "+",   "label": "Famiglie assistite" },
+      { "value": 90,     "format": "€M",  "label": "Erogato in finanziamenti" },
+      { "value": 18000,  "format": "€",   "label": "Risparmio medio cliente" },
+      { "value": 12,     "format": "",    "label": "Anni di esperienza" }
+    ],
+    "disclaimer": "Dati indicativi — verranno aggiornati con cifre certificate dallo studio."
+  },
+  "values": {
+    "eyebrow": "Perché scegliere un mediatore",
+    "title": "Due principi non negoziabili.",
+    "items": [
+      {
+        "title": "Massima trasparenza",
+        "body": "Lavoro per te, non per la banca. L'iscrizione OAM mi impone di mostrarti costi, commissioni e clausole di ogni proposta in chiaro, per iscritto. Nessuna sorpresa.",
+        "highlight": "0 costi nascosti"
+      },
+      {
+        "title": "Risultati concreti",
+        "body": "Accesso in tempo reale alle condizioni di 40+ banche partner Credipass. Confronto TAEG, spread, durata, surroghe e clausole. Formazione continua Credipass Academy.",
+        "highlight": "40+ banche"
+      }
+    ]
+  },
+  "services": {
+    "eyebrow": "Servizi",
+    "title": "Tutto il credito di cui hai bisogno, da una sola persona.",
+    "subtitle": "Famiglie, professionisti, imprese: per ogni esigenza esiste una soluzione strutturata.",
+    "openDetail": "Scopri di più",
+    "closeDetail": "Chiudi",
+    "swipeHint": "Scorri per vedere tutti i servizi",
+    "items": [
+      {
+        "id": "prestiti",
+        "title": "Prestiti Personali",
+        "body": "Liquidità per i tuoi progetti, con rate sostenibili e tempi rapidi di delibera.",
+        "detail": "Per esigenze fino a 75.000 €, con rate da 24 a 120 mesi. Confronto le offerte di tutte le banche partner per trovare il TAEG migliore in base al tuo profilo. Delibera in 24-72 ore, erogazione tipicamente entro 7 giorni dalla firma."
+      },
+      {
+        "id": "mutui",
+        "title": "Mutui Casa",
+        "body": "Prima casa, seconda casa, ristrutturazione, surroga. Confronto reale tra 40+ banche.",
+        "detail": "Dalla pre-qualifica fino al rogito: ti seguo passo passo. Confronto TAEG, spread, durata e LTV su tutte le banche partner. Tasso fisso, variabile o misto in base al tuo profilo di rischio. Erogazione mutuo prima casa fino al 100% del valore per giovani under 36."
+      },
+      {
+        "id": "quinto",
+        "title": "Cessione del Quinto",
+        "body": "Per dipendenti e pensionati: rata trattenuta in busta paga, senza garanti.",
+        "detail": "La rata viene trattenuta direttamente dal datore di lavoro o dalla cassa pensionistica, fino a un massimo del 20% del netto mensile. Niente garanti, niente verifiche complesse: la stabilità del rapporto di lavoro è sufficiente. Durata fino a 120 mesi."
+      },
+      {
+        "id": "imprese",
+        "title": "Consulenza Imprese",
+        "body": "Finanziamenti chirografari, leasing, factoring e linee di credito per la tua attività.",
+        "detail": "Analisi della struttura finanziaria e individuazione della soluzione di credito più efficace: chirografari fino a 7 anni, leasing strumentale e immobiliare, factoring pro-solvendo o pro-soluto, anticipi fatture. Accesso ai bandi pubblici e ai fondi di garanzia MCC."
+      },
+      {
+        "id": "rischi",
+        "title": "Analisi del Rischio",
+        "body": "Verifica preventiva di Crif e fattibilità prima di presentare la domanda in banca.",
+        "detail": "Prima ancora di inviare una pratica, eseguo una verifica preventiva del tuo merito creditizio (Crif, CTC, Experian) per evitare richieste sicure di rifiuto — ogni rifiuto registrato peggiora il tuo profilo. Se ci sono criticità, lavoriamo prima al risanamento."
+      },
+      {
+        "id": "immobiliare",
+        "title": "Trattative Immobiliari",
+        "body": "Ti affianco nella negoziazione del prezzo e nella tempistica del rogito.",
+        "detail": "Analisi del valore di mercato dell'immobile, supporto nella formulazione della proposta d'acquisto, gestione delle tempistiche di delibera bancaria e coordinamento con notaio e agenzia per arrivare al rogito senza intoppi."
+      },
+      {
+        "id": "agevolato",
+        "title": "Mutuo Agevolato",
+        "body": "Garanzia Consap, prima casa under 36, fondo giovani coppie: ti dico subito se hai diritto.",
+        "detail": "Esistono diversi strumenti pubblici di agevolazione: Fondo Consap Prima Casa (garanzia statale fino al 50%), Fondo Giovani Coppie, Fondo Sostegno Affitti. Verifico in 5 minuti se rientri nei requisiti ISEE/anagrafici e quale combinazione conviene di più."
+      },
+      {
+        "id": "famiglia",
+        "title": "Finanziamenti Famiglia",
+        "body": "Auto, studi dei figli, ristrutturazione: pianifichiamo insieme cosa conviene.",
+        "detail": "Spesso è meglio un piccolo prestito mirato di un grande mutuo. Analizziamo insieme l'esigenza concreta (acquisto auto, studi universitari, lavori in casa) e scegliamo lo strumento più economico: prestito finalizzato, mutuo liquidità o consolidamento."
+      },
+      {
+        "id": "b2b",
+        "title": "Credito B2B / Professionisti",
+        "body": "Anticipi fatture, finanziamenti soci, partita IVA: soluzioni dedicate.",
+        "detail": "Per liberi professionisti e ditte individuali: finanziamenti dedicati basati su redditi dichiarati, anticipi fatture per gestire i ritardi di pagamento della PA, leasing strumentale con detrazione fiscale, finanziamenti soci a tassi vantaggiosi."
+      }
+    ]
+  },
+  "mutui": {
+    "eyebrow": "Prodotti mutuo",
+    "title": "Il mutuo giusto per ogni momento della tua vita.",
+    "subtitle": "Cinque soluzioni, una sola priorità: la rata sostenibile per te.",
+    "ctaCalcola": "Calcola la rata",
+    "recommended": "Più richiesto",
+    "swipeHint": "Scorri per vedere tutte le tipologie",
+    "items": [
+      {
+        "id": "pass",
+        "title": "Pass Mutuo",
+        "shortTitle": "Pre-qualifica",
+        "tagline": "Sai quanto puoi spendere prima di cercare casa.",
+        "body": "Prima ancora di trovare l'immobile, sai esattamente quanto la banca è disposta a finanziarti. Entri in trattativa con un budget certo e maggiore potere negoziale.",
+        "bullets": [
+          "Pre-delibera bancaria in 48-72h",
+          "Validità 90 giorni, prorogabile",
+          "Zero costi e nessun impegno"
+        ]
+      },
+      {
+        "id": "prima-seconda",
+        "title": "Mutuo Prima o Seconda Casa",
+        "shortTitle": "Acquisto",
+        "tagline": "Il prodotto più richiesto: confronto tra 40+ banche.",
+        "body": "Confronto in tempo reale i tassi di oltre 40 banche per trovare la combinazione di TAN, spread e durata che minimizza il costo totale del tuo mutuo.",
+        "bullets": [
+          "Tasso fisso, variabile o misto",
+          "LTV fino al 100% per giovani under 36",
+          "Assistenza completa fino al rogito"
+        ],
+        "recommended": true
+      },
+      {
+        "id": "ristrutturazione",
+        "title": "Mutuo Ristrutturazione",
+        "shortTitle": "Lavori",
+        "tagline": "Liquidità per i lavori, abbinata a Ecobonus e Sismabonus.",
+        "body": "Liquidità per ammodernare casa, sfruttando al massimo Ecobonus, Sismabonus e Bonus Ristrutturazione. Calcolo l'integrazione fiscale ottimale.",
+        "bullets": [
+          "Erogazione a stato avanzamento lavori",
+          "Compatibile con detrazioni fiscali",
+          "Consulenza pratica e fiscale inclusa"
+        ]
+      },
+      {
+        "id": "surroga",
+        "title": "Mutuo Surroga",
+        "shortTitle": "Risparmio",
+        "tagline": "Cambi banca a costo zero, risparmi sulla rata.",
+        "body": "Trasferimento gratuito del tuo mutuo a un'altra banca con condizioni migliori. La legge Bersani lo rende a costo zero — io ti dico se conviene davvero.",
+        "bullets": [
+          "Confronto TAEG attuale vs nuove offerte",
+          "Costi totali a carico della nuova banca",
+          "Risparmio medio cliente: €18.000+"
+        ]
+      },
+      {
+        "id": "consolidamento",
+        "title": "Consolidamento Debiti",
+        "shortTitle": "Una rata",
+        "tagline": "Più rate diventano una sola, più sostenibile.",
+        "body": "Unisci più finanziamenti in un'unica rata sostenibile, riducendo lo sforzo mensile e semplificando la gestione delle tue finanze familiari.",
+        "bullets": [
+          "Una sola rata, durata più lunga",
+          "Possibilità di liquidità aggiuntiva",
+          "Migliora il merito creditizio nel tempo"
+        ]
+      }
+    ]
+  },
+  "authority": {
+    "eyebrow": "Autorità & fiducia",
+    "title": "Perché puoi fidarti di un mediatore creditizio.",
+    "intro": "Un mediatore è una figura iscritta a un albo pubblico, sottoposta a obblighi normativi che tutelano te, non la banca.",
+    "badges": [
+      {
+        "title": "Iscrizione OAM",
+        "subtitle": "Albo Mediatori n. [NUMERO OAM]",
+        "body": "Ente pubblico vigilato da Banca d'Italia che certifica e controlla la professione.",
+        "weight": "secondary"
+      },
+      {
+        "title": "Affiliato Credipass",
+        "subtitle": "Rete nazionale ufficiale",
+        "body": "Una delle principali reti italiane di mediazione, con 40+ istituti partner e migliaia di consulenti certificati.",
+        "weight": "primary"
+      },
+      {
+        "title": "Credipass Academy",
+        "subtitle": "Formazione continua certificata",
+        "body": "Aggiornamento normativo, fiscale e di prodotto obbligatorio annuale.",
+        "weight": "secondary"
+      }
+    ],
+    "whyTitle": "Perché affidarsi a un mediatore?",
+    "whyBullets": [
+      { "highlight": "Indipendenza", "body": "non vendo il prodotto di una sola banca, scelgo il migliore per te tra 40+" },
+      { "highlight": "Tempo", "body": "gestisco la pratica per te, dai documenti alla delibera" },
+      { "highlight": "Risparmio", "body": "il mio compenso è solo a esito positivo e quasi sempre più che ripagato dal miglior tasso ottenuto" },
+      { "highlight": "Trasparenza", "body": "tutto è regolato dall'OAM e contrattualizzato per iscritto" }
+    ]
+  },
+  "chiSono": {
+    "eyebrow": "Chi sono",
+    "title": "Una persona, prima che un professionista.",
+    "shortIntro": "Da oltre un decennio aiuto famiglie e imprenditori sardi ad accedere al credito alle migliori condizioni di mercato.",
+    "highlights": [
+      { "value": "12 anni", "label": "Nel mercato creditizio" },
+      { "value": "Sardegna", "label": "Area di azione principale" },
+      { "value": "OAM ✓", "label": "Iscrizione albo nazionale" }
+    ],
+    "body": [
+      "Mi chiamo Riccardo Dettori e da oltre un decennio aiuto famiglie e imprenditori sardi ad accedere al credito alle migliori condizioni di mercato.",
+      "Lavoro come mediatore creditizio affiliato Credipass, una delle reti più strutturate d'Italia, con accesso diretto a oltre 40 istituti bancari. Sono iscritto all'OAM (Organismo Agenti e Mediatori) e seguo annualmente la formazione obbligatoria di Credipass Academy.",
+      "Quello che mi distingue non è tanto il numero delle banche con cui lavoro — è il tempo che dedico ad ascoltare prima di proporre. Un mutuo dura 20 o 30 anni: vale la pena partire bene."
+    ],
+    "readMore": "Leggi la mia storia completa",
+    "contactsTitle": "Parla direttamente con me",
+    "labels": {
+      "phone": "Telefono",
+      "email": "Email",
+      "hours": "Orari"
+    },
+    "imageAlt": "Foto di Riccardo Dettori"
+  },
+  "faq": {
+    "eyebrow": "Domande frequenti",
+    "title": "Le risposte alle domande che mi fanno tutti.",
+    "subtitle": "Se non trovi quello che cerchi, scrivimi: ti rispondo personalmente entro 24 ore.",
+    "categories": {
+      "costi": "Costi",
+      "tempi": "Tempi",
+      "requisiti": "Requisiti",
+      "procedura": "Procedura"
+    },
+    "items": [
+      {
+        "cat": "costi",
+        "q": "Quanto costa un mediatore creditizio?",
+        "a": "Per i **mutui ipotecari** il compenso del mediatore è quasi sempre **interamente a carico della banca scelta**, quindi per te è gratuito. Per altri finanziamenti, se previsto un onorario al cliente, deve essere indicato per iscritto prima della firma, in piena trasparenza — è la legge OAM."
+      },
+      {
+        "cat": "tempi",
+        "q": "Posso richiedere un mutuo senza aver ancora trovato casa?",
+        "a": "Sì, con il **Pass Mutuo**. È una pre-qualifica bancaria che ti dice in **48-72 ore** quanto la banca è disposta a finanziarti. Entri in trattativa con un budget certo, e l'agenzia immobiliare ti tratterà con maggiore serietà."
+      },
+      {
+        "cat": "procedura",
+        "q": "Qual è la differenza tra mediatore creditizio e consulente finanziario?",
+        "a": "Il consulente finanziario investe il tuo patrimonio (azioni, fondi, polizze). Il mediatore creditizio ti aiuta a ottenere finanziamenti (mutui, prestiti, leasing). Sono due iscrizioni distinte a due albi diversi. Io sono iscritto solo all'**OAM**, l'albo dei mediatori creditizi."
+      },
+      {
+        "cat": "tempi",
+        "q": "Quanto tempo serve per ottenere un mutuo?",
+        "a": "Dal momento in cui hai tutta la documentazione pronta, la **pre-delibera arriva in 48-72 ore**. La delibera definitiva, dopo perizia sull'immobile, richiede **30-45 giorni**. Il rogito può avvenire entro **60 giorni** dalla domanda, se tutto procede nei tempi."
+      },
+      {
+        "cat": "requisiti",
+        "q": "Posso ottenere un mutuo anche se sono giovane o con contratto a tempo determinato?",
+        "a": "Sì, in molti casi. Esistono fondi pubblici di garanzia (**Consap**, **Fondo Giovani Coppie**) che coprono fino al **50% del finanziamento per under 36**. Per i contratti a termine, alcune banche valutano la continuità lavorativa anche su contratti non a tempo indeterminato. Vediamo insieme se rientri nei requisiti."
+      },
+      {
+        "cat": "costi",
+        "q": "La surroga del mutuo è davvero gratuita?",
+        "a": "Sì, dalla **Legge Bersani del 2007** tutti i costi della surroga sono a carico della nuova banca: perizia, notaio, istruttoria, imposte. Tu cambi banca e ottieni un tasso migliore senza spendere un euro. Conviene quando la differenza di TAEG supera **0,5–0,7 punti percentuali**."
+      },
+      {
+        "cat": "procedura",
+        "q": "Cosa serve per iniziare? Quali documenti devo prepararmi?",
+        "a": "Per la prima consulenza basta una chiamata: parliamo della tua situazione e ti dico subito se e come è fattibile. Poi serviranno: documento d'identità, codice fiscale, ultime 2 buste paga (o ultimi 2 Modelli Unici per autonomi), CU, ultimi estratti conto. Per il mutuo, anche compromesso o proposta d'acquisto."
+      },
+      {
+        "cat": "procedura",
+        "q": "Operate solo in Sardegna o in tutta Italia?",
+        "a": "Lavoro principalmente in Sardegna ma posso seguire pratiche in tutta Italia, perché la rete Credipass è nazionale. La consulenza si può fare in presenza, in videocall o per telefono — tu scegli."
+      }
+    ]
+  },
+  "testimonials": {
+    "eyebrow": "Le persone che ho aiutato",
+    "title": "Cosa dicono i miei clienti.",
+    "subtitle": "Testimonianze reali, raccolte dopo la chiusura della pratica. Nomi parziali per privacy.",
+    "swipeHint": "Scorri per leggere altre recensioni",
+    "items": [
+      {
+        "stars": 5,
+        "name": "Marco T.",
+        "role": "Cliente · Cagliari",
+        "date": "Marzo 2025",
+        "body": "Avevo già un mutuo, mi ha trovato una surroga che mi fa risparmiare 240€ al mese. Spiegazioni chiare, zero pressioni. Riccardo è una di quelle persone che ti rendono semplice una cosa complicata."
+      },
+      {
+        "stars": 5,
+        "name": "Giulia & Andrea",
+        "role": "Coppia under 36 · Olbia",
+        "date": "Gennaio 2025",
+        "body": "Pensavamo di non potercelo permettere. Riccardo ha trovato un mutuo agevolato Consap che copriva il 100% del valore. Ci ha seguito passo passo fino al rogito, sempre disponibile anche di sera."
+      },
+      {
+        "stars": 5,
+        "name": "Studio L.",
+        "role": "Imprenditore · Sassari",
+        "date": "Novembre 2024",
+        "body": "Avevo bisogno di liquidità per investire nell'azienda. Mi ha strutturato un finanziamento chirografario a condizioni che la mia banca storica non mi aveva nemmeno fatto vedere. Professionista vero."
+      },
+      {
+        "stars": 5,
+        "name": "Famiglia M.",
+        "role": "Acquisto prima casa · Alghero",
+        "date": "Settembre 2024",
+        "body": "Pre-qualifica in 48 ore, ci ha permesso di trattare il prezzo della casa con sicurezza. Il rogito è arrivato esattamente nei tempi previsti. Consulenza completamente gratuita."
+      }
+    ]
+  },
+  "ctaFinal": {
+    "eyebrow": "Inizia ora",
+    "title": "Trova il mutuo giusto per te.",
+    "titleAccent": "Gratis, in 60 secondi.",
+    "body": "Nessun costo, nessuna pressione. Inserisci pochi dati sul portale Credipass e ricevi una stima personalizzata. Poi, se vuoi, ne parliamo insieme.",
+    "ctaPrimary": "Calcola il preventivo →",
+    "ctaSecondaryTitle": "Preferisci parlarne prima?",
+    "ctaCall": "Chiamami",
+    "ctaWhatsapp": "Scrivimi su WhatsApp",
+    "guarantee": "Consulenza sempre gratuita · Nessun impegno · Risposta entro 24h"
+  },
+  "contact": {
+    "eyebrow": "Contatti",
+    "title": "Parliamone.",
+    "subtitle": "Scrivimi qui o contattami direttamente. Rispondo personalmente entro 24 ore lavorative.",
+    "form": {
+      "name": "Nome e cognome",
+      "namePlaceholder": "Es. Marco Rossi",
+      "email": "Email",
+      "emailPlaceholder": "mario@esempio.it",
+      "phone": "Telefono",
+      "phonePlaceholder": "Es. 333 1234567",
+      "topic": "Tipo di richiesta",
+      "topicOptions": [
+        "Mutuo prima casa",
+        "Surroga mutuo",
+        "Prestito personale",
+        "Cessione del quinto",
+        "Finanziamento aziendale",
+        "Non lo so ancora",
+        "Altro"
+      ],
+      "message": "Messaggio",
+      "messagePlaceholder": "Raccontami brevemente la tua situazione…",
+      "privacyBefore": "Ho letto e accetto l'",
+      "privacyLink": "informativa sulla privacy",
+      "privacyAfter": "",
+      "submit": "Invia richiesta",
+      "submitting": "Invio in corso…",
+      "success": "Grazie! Ti rispondo entro 24 ore lavorative.",
+      "error": "Qualcosa è andato storto. Riprova o scrivimi via email.",
+      "fallbackTitle": "Form non ancora configurato",
+      "fallbackBody": "Contattami direttamente — rispondo molto più velocemente:",
+      "fallbackEmail": "Scrivi un'email",
+      "fallbackWhatsapp": "Chat WhatsApp"
+    },
+    "infoTitle": "Oppure contattami direttamente"
+  },
+  "footer": {
+    "tagline": "Mediatore creditizio · Affiliato Credipass · Sardegna",
+    "quickLinks": "Link rapidi",
+    "legal": "Informazioni legali",
+    "language": "Lingua",
+    "privacy": "Privacy Policy",
+    "cookies": "Cookie Policy",
+    "vat": "P.IVA",
+    "oam": "Iscrizione OAM",
+    "credits": "Tutti i diritti riservati.",
+    "disclaimer": "Sito personale di Riccardo Dettori, mediatore creditizio affiliato Credipass. Le condizioni economiche dei prodotti illustrati sono indicative e soggette a delibera dell'istituto erogante."
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "subtitle": "Informativa ai sensi del Regolamento UE 2016/679 (GDPR).",
+    "body": [
+      { "h": "Titolare del trattamento", "p": "Riccardo Dettori, P.IVA [P.IVA], in qualità di mediatore creditizio affiliato Credipass." },
+      { "h": "Dati raccolti", "p": "Tramite il form di contatto raccogliamo nome, email, telefono, tipo di richiesta e messaggio. Tutti i campi sono volontari." },
+      { "h": "Finalità", "p": "I dati sono utilizzati esclusivamente per rispondere alla richiesta inviata e fornire consulenza creditizia. Non vengono ceduti a terzi e non sono usati per fini di marketing senza esplicito consenso." },
+      { "h": "Conservazione", "p": "I dati sono conservati per il tempo strettamente necessario all'evasione della richiesta, e comunque non oltre 24 mesi salvo obblighi di legge." },
+      { "h": "Diritti dell'interessato", "p": "Puoi in qualsiasi momento richiedere accesso, rettifica, cancellazione o limitazione dei tuoi dati scrivendo a riccardo.dettori@credipass.it." }
+    ],
+    "back": "Torna alla home"
+  }
+}

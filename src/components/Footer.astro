@@ -1,0 +1,77 @@
+---
+import Icon from './Icon.astro';
+import LanguageSwitcher from './LanguageSwitcher.astro';
+import { CONTACT } from '../config/seo';
+import { getDictionary } from '../utils/i18n';
+import { localePath, type Locale } from '../config/i18n';
+
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const t = getDictionary(locale);
+
+const quick = [
+  { href: '#chi-sono', label: t.nav.chiSono },
+  { href: '#servizi', label: t.nav.servizi },
+  { href: '#mutui', label: t.nav.mutui },
+  { href: '#faq', label: t.nav.faq },
+  { href: '#contatti', label: t.nav.contatti },
+];
+
+const year = new Date().getFullYear();
+---
+
+<footer class="bg-navy-900 text-white pt-14 sm:pt-20 pb-8 sm:pb-10 relative overflow-hidden">
+  <div class="absolute inset-0 pattern-dots opacity-20 pointer-events-none" aria-hidden="true"></div>
+
+  <div class="container-page relative">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-[1.4fr,1fr,1fr] gap-8 sm:gap-10">
+      <div>
+        <div class="flex items-center gap-2.5">
+          <span class="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-gold-gradient text-navy font-display font-bold">RD</span>
+          <div>
+            <div class="font-display text-lg leading-tight">Riccardo Dettori</div>
+            <div class="text-[10px] uppercase tracking-[0.18em] text-white/50">Credipass · Sardegna</div>
+          </div>
+        </div>
+        <p class="mt-4 sm:mt-5 text-sm text-white/65 leading-relaxed max-w-sm">
+          {t.footer.tagline}
+        </p>
+        <div class="mt-5 flex items-center gap-2">
+          <a href={CONTACT.whatsappHref} target="_blank" rel="noopener" aria-label={t.nav.whatsapp} class="h-9 w-9 rounded-full bg-[#25D366] text-white flex items-center justify-center hover:bg-[#1DA851] transition-colors">
+            <Icon name="whatsapp" size={16} />
+          </a>
+          <a href={CONTACT.phoneHref} aria-label={t.nav.call} class="h-9 w-9 rounded-full bg-white/10 text-white flex items-center justify-center hover:bg-white/20 transition-colors">
+            <Icon name="phone" size={15} />
+          </a>
+          <a href={`mailto:${CONTACT.email}`} aria-label={t.chiSono.labels.email} class="h-9 w-9 rounded-full bg-white/10 text-white flex items-center justify-center hover:bg-white/20 transition-colors">
+            <Icon name="mail" size={15} />
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="text-[11px] uppercase tracking-[0.18em] text-gold-300 font-semibold">{t.footer.quickLinks}</h4>
+        <ul class="mt-4 sm:mt-5 space-y-2.5 sm:space-y-3 text-sm">
+          {quick.map((l) => <li><a href={l.href} class="text-white/70 hover:text-white transition-colors">{l.label}</a></li>)}
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-[11px] uppercase tracking-[0.18em] text-gold-300 font-semibold">{t.footer.legal}</h4>
+        <ul class="mt-4 sm:mt-5 space-y-2.5 text-sm text-white/70">
+          <li><a href={localePath(locale, 'privacy')} class="hover:text-white transition-colors">{t.footer.privacy}</a></li>
+          <li>{t.footer.vat}: <span class="text-white/85">{CONTACT.vat}</span></li>
+          <li>{t.footer.oam}: <span class="text-white/85">n. {CONTACT.oamNumber}</span></li>
+        </ul>
+        <div class="mt-5">
+          <LanguageSwitcher current={locale} variant="dark" />
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-10 sm:mt-14 pt-6 sm:pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between gap-4 text-[11px] sm:text-xs text-white/55">
+      <p>© {year} Riccardo Dettori. {t.footer.credits}</p>
+      <p class="max-w-2xl sm:text-right leading-relaxed">{t.footer.disclaimer}</p>
+    </div>
+  </div>
+</footer>

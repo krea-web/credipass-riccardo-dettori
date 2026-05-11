@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1B2D55"/>
+      <stop offset="1" stop-color="#0C172C"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.8" cy="0.2" r="0.5">
+      <stop offset="0" stop-color="#F5A623" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#F5A623" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="dots" x="0" y="0" width="22" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="rgba(255,255,255,0.06)"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#dots)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+
+  <!-- Eyebrow line -->
+  <g transform="translate(80, 96)">
+    <line x1="0" y1="14" x2="44" y2="14" stroke="#F5A623" stroke-width="2"/>
+    <text x="60" y="20" font-family="Manrope, system-ui, sans-serif" font-weight="600" font-size="20" letter-spacing="3" fill="#F5A623">MEDIATORE CREDITIZIO · CREDIPASS</text>
+  </g>
+
+  <!-- Headline -->
+  <text x="80" y="240" font-family="Fraunces, Georgia, serif" font-weight="700" font-size="92" fill="#FFFFFF" letter-spacing="-1">Riccardo Dettori</text>
+  <text x="80" y="340" font-family="Fraunces, Georgia, serif" font-weight="600" font-size="58" fill="#F7BE53" letter-spacing="-1">Esperto in finanziamenti</text>
+  <text x="80" y="408" font-family="Fraunces, Georgia, serif" font-weight="600" font-size="58" fill="#F7BE53" letter-spacing="-1">e crediti.</text>
+
+  <!-- Sub-headline -->
+  <text x="80" y="486" font-family="Manrope, system-ui, sans-serif" font-weight="400" font-size="26" fill="rgba(255,255,255,0.7)">Mutui · Prestiti · Cessione del quinto · Finanziamenti aziendali</text>
+
+  <!-- Trust chips -->
+  <g transform="translate(80, 528)">
+    <g>
+      <rect x="0" y="0" width="190" height="46" rx="23" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.18)"/>
+      <text x="22" y="31" font-family="Manrope, sans-serif" font-weight="600" font-size="18" fill="#FFFFFF">✓ Iscrizione OAM</text>
+    </g>
+    <g transform="translate(208, 0)">
+      <rect x="0" y="0" width="220" height="46" rx="23" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.18)"/>
+      <text x="22" y="31" font-family="Manrope, sans-serif" font-weight="600" font-size="18" fill="#FFFFFF">✓ Affiliato Credipass</text>
+    </g>
+    <g transform="translate(446, 0)">
+      <rect x="0" y="0" width="240" height="46" rx="23" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.18)"/>
+      <text x="22" y="31" font-family="Manrope, sans-serif" font-weight="600" font-size="18" fill="#FFFFFF">✓ Consulenza gratuita</text>
+    </g>
+  </g>
+
+  <!-- Decorative monogram -->
+  <g transform="translate(960, 110)">
+    <rect x="0" y="0" width="180" height="180" rx="32" fill="#F5A623"/>
+    <text x="90" y="125" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-weight="700" font-size="84" fill="#1B2D55">RD</text>
+  </g>
+
+  <!-- URL strip -->
+  <g transform="translate(960, 558)">
+    <text text-anchor="end" x="180" y="0" font-family="Manrope, sans-serif" font-weight="600" font-size="22" letter-spacing="2" fill="rgba(255,255,255,0.55)">RICCARDODETTORI.IT</text>
+  </g>
+</svg>

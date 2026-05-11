@@ -1,0 +1,206 @@
+---
+import Icon from './Icon.astro';
+import LanguageSwitcher from './LanguageSwitcher.astro';
+import { CREDIPASS_CTA_URL, CONTACT } from '../config/seo';
+import { getDictionary } from '../utils/i18n';
+import type { Locale } from '../config/i18n';
+
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const t = getDictionary(locale);
+
+const links = [
+  { href: '#chi-sono', label: t.nav.chiSono },
+  { href: '#servizi', label: t.nav.servizi },
+  { href: '#mutui', label: t.nav.mutui },
+  { href: '#faq', label: t.nav.faq },
+  { href: '#contatti', label: t.nav.contatti },
+];
+---
+
+<header
+  id="site-header"
+  class="fixed inset-x-0 top-0 z-40"
+  data-navbar
+>
+  <div
+    class="mx-auto flex w-full max-w-6xl items-center justify-between gap-3 px-4 py-3 sm:px-8 sm:py-4"
+  >
+    <a href={`/${locale}/`} class="flex items-center gap-2.5 group min-w-0" aria-label="Riccardo Dettori — Home">
+      <span class="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-gold-gradient text-navy font-display font-bold text-base shadow-gold/40 shadow-sm flex-none" aria-hidden="true">RD</span>
+      <span class="hidden sm:flex flex-col leading-tight min-w-0">
+        <span class="font-display font-semibold text-[15px]" data-nav-text>Riccardo Dettori</span>
+        <span class="text-[10px] uppercase tracking-[0.18em]" data-nav-text-muted>Credipass · Sardegna</span>
+      </span>
+    </a>
+
+    <nav class="hidden lg:flex items-center gap-7" aria-label="Primary">
+      {links.map(({ href, label }) => (
+        <a
+          href={href}
+          class="text-sm font-medium transition-colors"
+          data-nav-link
+        >
+          {label}
+        </a>
+      ))}
+    </nav>
+
+    <div class="flex items-center gap-2">
+      <a
+        href={CONTACT.whatsappHref}
+        target="_blank"
+        rel="noopener"
+        aria-label={t.nav.whatsapp}
+        class="hidden sm:inline-flex h-10 w-10 items-center justify-center rounded-full bg-[#25D366] text-white hover:bg-[#1DA851] transition-colors"
+      >
+        <Icon name="whatsapp" size={18} />
+      </a>
+      <div class="hidden sm:block">
+        <LanguageSwitcher current={locale} variant="auto" />
+      </div>
+      <a
+        href={CREDIPASS_CTA_URL}
+        target="_blank"
+        rel="noopener"
+        class="btn-primary !py-2.5 !px-4 sm:!px-5 text-[13px]"
+      >
+        <span class="hidden sm:inline">{t.nav.ctaFull}</span>
+        <span class="sm:hidden">{t.nav.cta}</span>
+        <Icon name="chevron-right" size={12} strokeWidth={3} />
+      </a>
+      <button
+        type="button"
+        class="lg:hidden inline-flex h-10 w-10 items-center justify-center rounded-lg transition-colors"
+        aria-label={t.nav.menu}
+        aria-controls="mobile-menu"
+        aria-expanded="false"
+        data-menu-toggle
+        data-nav-icon
+      >
+        <Icon name="menu" size={22} />
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile drawer + overlay -->
+  <div
+    id="mobile-menu-overlay"
+    class="lg:hidden fixed inset-0 z-30 bg-navy-900/60 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-200"
+    data-menu-overlay
+  ></div>
+  <div
+    id="mobile-menu"
+    class="lg:hidden fixed inset-x-0 top-[60px] z-40 mx-3 mt-1 rounded-2xl border border-navy/10 bg-white shadow-lift origin-top scale-y-95 opacity-0 pointer-events-none transition-all duration-200"
+    data-mobile-menu
+  >
+    <nav class="flex flex-col p-3" aria-label="Mobile">
+      {links.map(({ href, label }) => (
+        <a
+          href={href}
+          class="rounded-lg px-4 py-3 text-sm font-medium text-navy/85 hover:bg-offwhite flex items-center justify-between"
+          data-mobile-link
+        >
+          {label}
+          <Icon name="chevron-right" size={14} strokeWidth={2.5} class="text-navy/30" />
+        </a>
+      ))}
+      <div class="mt-2 pt-3 border-t border-navy/8 flex items-center gap-2 px-1">
+        <a
+          href={CONTACT.whatsappHref}
+          target="_blank"
+          rel="noopener"
+          class="flex-1 inline-flex items-center justify-center gap-1.5 rounded-lg bg-[#25D366] text-white text-sm font-semibold py-3"
+        >
+          <Icon name="whatsapp" size={16} />
+          {t.nav.whatsapp}
+        </a>
+        <a
+          href={CONTACT.phoneHref}
+          class="flex-1 inline-flex items-center justify-center gap-1.5 rounded-lg bg-navy text-white text-sm font-semibold py-3"
+        >
+          <Icon name="phone" size={16} />
+          {t.nav.call}
+        </a>
+      </div>
+      <div class="mt-3 px-2 pb-1">
+        <LanguageSwitcher current={locale} variant="light" />
+      </div>
+    </nav>
+  </div>
+</header>
+
+<style>
+  [data-navbar] {
+    transition: background-color 250ms ease, box-shadow 250ms ease, backdrop-filter 250ms ease;
+    background: transparent;
+  }
+  [data-navbar].is-scrolled {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: saturate(160%) blur(12px);
+    -webkit-backdrop-filter: saturate(160%) blur(12px);
+    box-shadow: 0 1px 0 rgba(27, 45, 85, 0.06), 0 6px 20px rgba(27, 45, 85, 0.04);
+  }
+  /* When over hero (not scrolled): white text. After scroll: navy text. */
+  [data-navbar]:not(.is-scrolled) [data-nav-text]      { color: rgba(255,255,255,0.95); }
+  [data-navbar]:not(.is-scrolled) [data-nav-text-muted]{ color: rgba(255,255,255,0.55); }
+  [data-navbar]:not(.is-scrolled) [data-nav-link]      { color: rgba(255,255,255,0.85); }
+  [data-navbar]:not(.is-scrolled) [data-nav-link]:hover{ color: #ffffff; }
+  [data-navbar]:not(.is-scrolled) [data-nav-icon]      { color: rgba(255,255,255,0.95); }
+
+  [data-navbar].is-scrolled [data-nav-text]      { color: #1B2D55; }
+  [data-navbar].is-scrolled [data-nav-text-muted]{ color: #6B7280; }
+  [data-navbar].is-scrolled [data-nav-link]      { color: rgba(27,45,85,0.75); }
+  [data-navbar].is-scrolled [data-nav-link]:hover{ color: #1B2D55; }
+  [data-navbar].is-scrolled [data-nav-icon]      { color: #1B2D55; }
+
+  [data-mobile-menu].is-open {
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: auto;
+  }
+  [data-menu-overlay].is-open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+</style>
+
+<script is:inline>
+  (() => {
+    const header = document.querySelector('[data-navbar]');
+    const toggle = document.querySelector('[data-menu-toggle]');
+    const menu = document.querySelector('[data-mobile-menu]');
+    const overlay = document.querySelector('[data-menu-overlay]');
+
+    const setScrolled = () => {
+      if (!header) return;
+      if (window.scrollY > 8) header.classList.add('is-scrolled');
+      else header.classList.remove('is-scrolled');
+    };
+    setScrolled();
+    window.addEventListener('scroll', setScrolled, { passive: true });
+
+    const closeMenu = () => {
+      if (!menu) return;
+      menu.classList.remove('is-open');
+      overlay?.classList.remove('is-open');
+      toggle?.setAttribute('aria-expanded', 'false');
+    };
+    const openMenu = () => {
+      if (!menu) return;
+      menu.classList.add('is-open');
+      overlay?.classList.add('is-open');
+      toggle?.setAttribute('aria-expanded', 'true');
+    };
+    toggle?.addEventListener('click', () => {
+      const open = menu?.classList.contains('is-open');
+      if (open) closeMenu();
+      else openMenu();
+    });
+    overlay?.addEventListener('click', closeMenu);
+    menu?.querySelectorAll('[data-mobile-link]').forEach((l) => l.addEventListener('click', closeMenu));
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeMenu();
+    });
+  })();
+</script>

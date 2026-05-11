@@ -1,0 +1,88 @@
+---
+import Icon from './Icon.astro';
+import { LOCALES, LOCALE_LABELS, TRANSLATED_LOCALES, localePath, type Locale } from '../config/i18n';
+
+interface Props {
+  current: Locale;
+  pathSuffix?: string;
+  /** 'light' on light bg, 'dark' on dark bg, 'auto' inherits navbar state */
+  variant?: 'light' | 'dark' | 'auto';
+}
+
+const { current, pathSuffix = '', variant = 'dark' } = Astro.props;
+const isAuto = variant === 'auto';
+const onDark = variant === 'dark';
+---
+
+<details class="relative group" data-lang-switcher data-variant={variant}>
+  <summary
+    class:list={[
+      'list-none cursor-pointer select-none inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-semibold transition-colors',
+      isAuto && 'lang-auto',
+      !isAuto && onDark && 'text-white/80 hover:text-white border border-white/20 hover:border-white/40',
+      !isAuto && !onDark && 'text-navy/80 hover:text-navy border border-navy/15 hover:border-navy/30',
+    ]}
+    aria-label="Switch language"
+  >
+    <Icon name="globe" size={14} />
+    <span class="uppercase tracking-wider">{current}</span>
+    <Icon name="chevron-down" size={10} strokeWidth={3} />
+  </summary>
+  <div
+    class="absolute right-0 mt-2 z-50 w-56 rounded-xl bg-white text-navy shadow-lift border border-navy/10 overflow-hidden"
+    role="menu"
+  >
+    {LOCALES.map((l) => {
+      const translated = TRANSLATED_LOCALES.includes(l);
+      return (
+      <a
+        href={localePath(l, pathSuffix)}
+        role="menuitem"
+        aria-current={l === current ? 'true' : 'false'}
+        class:list={[
+          'flex items-center gap-2 px-3.5 py-2.5 text-sm hover:bg-offwhite transition-colors',
+          l === current ? 'font-semibold text-gold-700 bg-offwhite' : 'text-navy/85',
+        ]}
+      >
+        <span class="flex-1 truncate">{LOCALE_LABELS[l].native}</span>
+        {!translated && (
+          <span class="text-[9px] uppercase tracking-wider rounded-sm bg-navy/8 text-navy/55 px-1.5 py-0.5">
+            beta
+          </span>
+        )}
+        <span class="text-[10px] uppercase tracking-wider text-muted font-mono">{l}</span>
+      </a>
+      );
+    })}
+  </div>
+</details>
+
+<style is:global>
+  /* Auto-variant inherits navbar color state via the surrounding navbar classes. */
+  [data-navbar]:not(.is-scrolled) .lang-auto {
+    color: rgba(255,255,255,0.85);
+    border: 1px solid rgba(255,255,255,0.2);
+  }
+  [data-navbar]:not(.is-scrolled) .lang-auto:hover {
+    color: rgba(255,255,255,1);
+    border-color: rgba(255,255,255,0.4);
+  }
+  [data-navbar].is-scrolled .lang-auto,
+  .lang-auto {
+    color: rgba(27,45,85,0.8);
+    border: 1px solid rgba(27,45,85,0.15);
+  }
+  [data-navbar].is-scrolled .lang-auto:hover,
+  .lang-auto:hover {
+    color: #1B2D55;
+    border-color: rgba(27,45,85,0.3);
+  }
+</style>
+
+<script is:inline>
+  document.addEventListener('click', (e) => {
+    document.querySelectorAll('details[data-lang-switcher][open]').forEach((d) => {
+      if (!d.contains(e.target)) d.removeAttribute('open');
+    });
+  });
+</script>

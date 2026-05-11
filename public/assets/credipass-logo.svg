@@ -1,0 +1,5 @@
+<!-- Placeholder Credipass logo. Replace with the official asset from the brand kit. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 48" role="img" aria-label="Credipass">
+  <rect x="0" y="0" width="200" height="48" rx="6" fill="#1B2D55"/>
+  <text x="100" y="32" font-family="'Manrope', sans-serif" font-weight="700" font-size="20" fill="#F5A623" text-anchor="middle" letter-spacing="2">CREDIPASS</text>
+</svg>

@@ -1,0 +1,111 @@
+---
+import Icon from './Icon.astro';
+import BottomSheet from './BottomSheet.astro';
+import { CONTACT } from '../config/seo';
+import { getDictionary } from '../utils/i18n';
+import type { Locale } from '../config/i18n';
+
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const t = getDictionary(locale);
+---
+
+<section id="chi-sono" class="section">
+  <div class="container-page">
+    <div class="grid lg:grid-cols-[1fr,1fr] gap-10 lg:gap-16 items-start">
+      <!-- Left: identity & highlights instead of a second placeholder photo -->
+      <div data-reveal>
+        <span class="eyebrow">{t.chiSono.eyebrow}</span>
+        <h2 class="mt-3 sm:mt-4 h-section">{t.chiSono.title}</h2>
+        <p class="mt-4 sm:mt-5 text-base sm:text-lg text-ink/80 leading-relaxed">
+          {t.chiSono.shortIntro}
+        </p>
+
+        <!-- Quick highlights -->
+        <ul class="mt-7 sm:mt-9 grid grid-cols-3 gap-3 sm:gap-4">
+          {t.chiSono.highlights.map((h) => (
+            <li class="rounded-xl bg-offwhite border border-navy/8 px-3 sm:px-4 py-3 sm:py-4 text-center">
+              <div class="font-display text-lg sm:text-2xl font-semibold text-navy leading-tight">{h.value}</div>
+              <div class="mt-1 text-[11px] uppercase tracking-wider text-muted">{h.label}</div>
+            </li>
+          ))}
+        </ul>
+
+        <button
+          type="button"
+          data-open-sheet="sheet-chi-sono"
+          class="mt-7 inline-flex items-center gap-1.5 text-sm font-semibold text-gold-700 hover:text-gold-800 transition-colors"
+        >
+          {t.chiSono.readMore}
+          <Icon name="arrow-right" size={14} strokeWidth={2.5} />
+        </button>
+      </div>
+
+      <!-- Right: contacts card (primary action surface) -->
+      <div class="rounded-2xl border border-navy/10 bg-navy text-white p-6 sm:p-8 shadow-lift relative overflow-hidden" data-reveal style="transition-delay:120ms">
+        <div class="absolute -top-12 -right-12 h-44 w-44 rounded-full bg-gold-gradient opacity-15 blur-3xl" aria-hidden="true"></div>
+        <div class="relative">
+          <div class="flex items-center gap-3">
+            <span class="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gold-gradient text-navy font-display font-bold text-lg">RD</span>
+            <div>
+              <div class="font-display text-lg leading-tight">Riccardo Dettori</div>
+              <div class="text-[11px] uppercase tracking-[0.18em] text-white/55">Credipass · Sardegna</div>
+            </div>
+          </div>
+
+          <h3 class="mt-7 font-display text-lg font-semibold">{t.chiSono.contactsTitle}</h3>
+
+          <ul class="mt-5 space-y-3">
+            <li>
+              <a href={CONTACT.whatsappHref} target="_blank" rel="noopener" class="flex items-center gap-3 rounded-lg bg-white/8 hover:bg-white/12 px-4 py-3 transition-colors">
+                <span class="h-9 w-9 rounded-full bg-[#25D366] text-white flex items-center justify-center flex-none">
+                  <Icon name="whatsapp" size={16} />
+                </span>
+                <div class="min-w-0">
+                  <div class="text-[11px] uppercase tracking-wider text-white/55 font-semibold">{t.nav.whatsapp}</div>
+                  <div class="text-sm font-medium truncate">{CONTACT.whatsappNumber}</div>
+                </div>
+                <Icon name="chevron-right" size={14} strokeWidth={2.5} class="ml-auto text-white/40" />
+              </a>
+            </li>
+            <li>
+              <a href={CONTACT.phoneHref} class="flex items-center gap-3 rounded-lg bg-white/8 hover:bg-white/12 px-4 py-3 transition-colors">
+                <span class="h-9 w-9 rounded-full bg-white/10 text-white flex items-center justify-center flex-none">
+                  <Icon name="phone" size={16} />
+                </span>
+                <div class="min-w-0">
+                  <div class="text-[11px] uppercase tracking-wider text-white/55 font-semibold">{t.chiSono.labels.phone}</div>
+                  <div class="text-sm font-medium truncate">{CONTACT.phone}</div>
+                </div>
+                <Icon name="chevron-right" size={14} strokeWidth={2.5} class="ml-auto text-white/40" />
+              </a>
+            </li>
+            <li>
+              <a href={`mailto:${CONTACT.email}`} class="flex items-center gap-3 rounded-lg bg-white/8 hover:bg-white/12 px-4 py-3 transition-colors">
+                <span class="h-9 w-9 rounded-full bg-white/10 text-white flex items-center justify-center flex-none">
+                  <Icon name="mail" size={16} />
+                </span>
+                <div class="min-w-0">
+                  <div class="text-[11px] uppercase tracking-wider text-white/55 font-semibold">{t.chiSono.labels.email}</div>
+                  <div class="text-sm font-medium truncate">{CONTACT.email}</div>
+                </div>
+                <Icon name="chevron-right" size={14} strokeWidth={2.5} class="ml-auto text-white/40" />
+              </a>
+            </li>
+          </ul>
+
+          <div class="mt-6 pt-5 border-t border-white/10 flex items-center gap-2 text-xs text-white/65">
+            <Icon name="clock" size={14} />
+            <span>{CONTACT.officeHours}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <BottomSheet id="sheet-chi-sono" title={t.chiSono.title} eyebrow={t.chiSono.eyebrow}>
+    <div class="space-y-4 text-ink/80 leading-relaxed">
+      {t.chiSono.body.map((p) => <p>{p}</p>)}
+    </div>
+  </BottomSheet>
+</section>

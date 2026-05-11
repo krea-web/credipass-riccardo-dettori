@@ -1,0 +1,41 @@
+---
+import Icon from './Icon.astro';
+import { getDictionary } from '../utils/i18n';
+import type { Locale } from '../config/i18n';
+
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const t = getDictionary(locale);
+
+const icons = ['shield', 'trending-up'];
+---
+
+<section class="section bg-offwhite">
+  <div class="container-page">
+    <div class="max-w-2xl" data-reveal>
+      <span class="eyebrow">{t.values.eyebrow}</span>
+      <h2 class="mt-3 sm:mt-4 h-section">{t.values.title}</h2>
+    </div>
+
+    <div class="mt-10 sm:mt-14 grid sm:grid-cols-2 gap-4 sm:gap-6 lg:gap-10">
+      {t.values.items.map((item, i) => (
+        <article class="card relative overflow-hidden" data-reveal style={`transition-delay:${i * 90}ms`}>
+          <div class="absolute top-5 right-5">
+            <span class="inline-flex items-center rounded-full bg-gold/15 text-gold-700 px-2.5 py-1 text-[11px] font-bold uppercase tracking-wider">
+              {item.highlight}
+            </span>
+          </div>
+          <div class="flex items-start gap-4 pr-20 sm:pr-24">
+            <div class="flex-none h-12 w-12 sm:h-14 sm:w-14 rounded-2xl bg-gold-gradient text-navy flex items-center justify-center shadow-gold/60 shadow-sm">
+              <Icon name={icons[i]} size={24} strokeWidth={2.2} />
+            </div>
+            <div>
+              <h3 class="font-display text-xl sm:text-2xl font-semibold text-navy">{item.title}</h3>
+              <p class="mt-2 sm:mt-3 text-sm sm:text-base text-ink/70 leading-relaxed">{item.body}</p>
+            </div>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

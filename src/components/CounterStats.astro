@@ -1,0 +1,102 @@
+---
+import { getDictionary } from '../utils/i18n';
+import type { Locale } from '../config/i18n';
+
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const t = getDictionary(locale);
+
+// Number formatter used for both initial markup and JS animation (must match).
+const numberLocale = locale === 'en' ? 'en-US' : 'it-IT';
+
+function format(value: number, fmt: string): string {
+  if (fmt === '€M') return `€${value}M`;
+  if (fmt === '€') return `€${value.toLocaleString(numberLocale)}`;
+  if (fmt === '+') return `${value.toLocaleString(numberLocale)}+`;
+  return value.toLocaleString(numberLocale);
+}
+---
+
+<section class="relative bg-navy text-white section-sm overflow-hidden">
+  <div class="absolute inset-0 pattern-dots opacity-30 pointer-events-none" aria-hidden="true"></div>
+  <div
+    class="absolute -left-32 top-1/2 -translate-y-1/2 h-72 w-72 rounded-full bg-gold-gradient opacity-10 blur-3xl pointer-events-none"
+    aria-hidden="true"
+  ></div>
+
+  <div class="container-page relative">
+    <div class="max-w-2xl" data-reveal>
+      <span class="eyebrow on-dark">{t.stats.eyebrow}</span>
+      <h2 class="mt-3 sm:mt-4 font-display text-display-md text-white">{t.stats.title}</h2>
+      <p class="mt-3 sm:mt-4 text-white/70 leading-relaxed">{t.stats.intro}</p>
+    </div>
+
+    <ul class="mt-10 sm:mt-14 grid grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-8 sm:gap-8" data-counter-grid>
+      {t.stats.items.map((item, i) => (
+        <li
+          class="border-t border-white/15 pt-5 sm:pt-6"
+          data-reveal
+          style={`transition-delay:${i * 80}ms`}
+        >
+          <div
+            class="font-display text-4xl sm:text-5xl font-semibold text-gold-300 leading-none"
+            data-counter
+            data-value={item.value}
+            data-format={item.format}
+            data-locale={numberLocale}
+          >
+            {format(item.value, item.format)}
+          </div>
+          <div class="mt-3 text-xs sm:text-sm text-white/70 leading-snug">{item.label}</div>
+        </li>
+      ))}
+    </ul>
+
+    <p class="mt-8 sm:mt-10 text-[11px] sm:text-xs text-white/40 italic">{t.stats.disclaimer}</p>
+  </div>
+</section>
+
+<script is:inline>
+  (() => {
+    const counters = Array.from(document.querySelectorAll('[data-counter]'));
+    if (!counters.length) return;
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    const format = (value, fmt, locale) => {
+      const n = Math.round(value);
+      const fmtN = (x) => x.toLocaleString(locale);
+      if (fmt === '€M') return '€' + n + 'M';
+      if (fmt === '€') return '€' + fmtN(n);
+      if (fmt === '+') return fmtN(n) + '+';
+      return fmtN(n);
+    };
+
+    const animate = (el) => {
+      const target = parseInt(el.getAttribute('data-value') || '0', 10);
+      const fmt = el.getAttribute('data-format') || '';
+      const locale = el.getAttribute('data-locale') || 'it-IT';
+      if (reducedMotion) { el.textContent = format(target, fmt, locale); return; }
+      const duration = 1400;
+      const start = performance.now();
+      const step = (now) => {
+        const t = Math.min(1, (now - start) / duration);
+        const eased = 1 - Math.pow(1 - t, 3); // easeOutCubic
+        el.textContent = format(target * eased, fmt, locale);
+        if (t < 1) requestAnimationFrame(step);
+        else el.textContent = format(target, fmt, locale);
+      };
+      requestAnimationFrame(step);
+    };
+
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          animate(entry.target);
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.4 });
+
+    counters.forEach((c) => io.observe(c));
+  })();
+</script>

@@ -1,0 +1,29 @@
+---
+import { DEFAULT_LOCALE } from '../config/i18n';
+import { getDictionary } from '../utils/i18n';
+const locale = DEFAULT_LOCALE;
+const t = getDictionary(locale);
+---
+<!doctype html>
+<html lang={locale}>
+  <head>
+    <meta charset="utf-8" />
+    <title>404 — Pagina non trovata | Riccardo Dettori</title>
+    <meta name="robots" content="noindex" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Manrope:wght@400;500&display=swap" />
+    <style>
+      body { font-family: 'Manrope', system-ui, sans-serif; margin: 0; background: #1B2D55; color: white; min-height: 100vh; display: grid; place-items: center; padding: 2rem; text-align: center; }
+      h1 { font-family: 'Fraunces', serif; font-size: clamp(3rem, 8vw, 5rem); color: #F5A623; margin: 0; }
+      p { color: rgba(255,255,255,0.75); max-width: 36ch; margin: 1rem auto 2rem; line-height: 1.6; }
+      a { display: inline-block; background: #F5A623; color: #1B2D55; padding: 0.9rem 1.5rem; border-radius: 999px; font-weight: 700; text-decoration: none; }
+      a:hover { transform: translateY(-1px); }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>404</h1>
+      <p>La pagina che cerchi non esiste o è stata spostata.</p>
+      <a href={`/${locale}/`}>← {t.privacy.back}</a>
+    </div>
+  </body>
+</html>

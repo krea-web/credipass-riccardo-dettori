@@ -1,0 +1,302 @@
+---
+import { SEO } from 'astro-seo';
+import {
+  LOCALES,
+  DEFAULT_LOCALE,
+  SITE_URL,
+  isRTL,
+  localePath,
+  type Locale,
+} from '../config/i18n';
+import { seoDefaults, CONTACT } from '../config/seo';
+import { getDictionary, isFallback } from '../utils/i18n';
+import '../styles/global.css';
+
+interface Props {
+  locale: Locale;
+  pageKey?: 'home' | 'privacy';
+  pathSuffix?: string; // e.g. '' for home, 'privacy' for privacy page
+  faqJsonLd?: { question: string; answer: string }[];
+  titleOverride?: string;
+  descriptionOverride?: string;
+}
+
+const {
+  locale,
+  pageKey = 'home',
+  pathSuffix = '',
+  faqJsonLd,
+  titleOverride,
+  descriptionOverride,
+} = Astro.props;
+
+const t = getDictionary(locale);
+const fallback = isFallback(locale);
+const defaults = seoDefaults[locale] ?? seoDefaults[DEFAULT_LOCALE];
+
+const title = titleOverride ?? defaults.title;
+const description = descriptionOverride ?? defaults.description;
+const dir = isRTL(locale) ? 'rtl' : 'ltr';
+
+const canonical = `${SITE_URL}${localePath(locale, pathSuffix)}`;
+
+const hreflangs = LOCALES.map((l) => ({
+  lang: l,
+  href: `${SITE_URL}${localePath(l, pathSuffix)}`,
+}));
+
+// Person + LocalBusiness combined JSON-LD for GEO
+const personLd = {
+  '@context': 'https://schema.org',
+  '@type': ['Person', 'LocalBusiness'],
+  '@id': `${SITE_URL}/#riccardo-dettori`,
+  name: 'Riccardo Dettori',
+  jobTitle: 'Mediatore Creditizio - Esperto in Finanziamenti e Crediti',
+  description:
+    'Riccardo Dettori è un mediatore creditizio certificato OAM, affiliato Credipass, specializzato in mutui, prestiti personali e finanziamenti per privati e imprese in Sardegna.',
+  url: SITE_URL,
+  image: `${SITE_URL}/og-cover.svg`,
+  telephone: CONTACT.phone,
+  email: CONTACT.email,
+  priceRange: 'Gratuito (consulenza)',
+  areaServed: [
+    { '@type': 'AdministrativeArea', name: 'Sardegna' },
+    { '@type': 'Country', name: 'Italia' },
+  ],
+  address: {
+    '@type': 'PostalAddress',
+    addressRegion: 'Sardegna',
+    addressCountry: 'IT',
+  },
+  memberOf: [
+    {
+      '@type': 'Organization',
+      name: 'Credipass',
+      url: 'https://www.credipass.it',
+    },
+    {
+      '@type': 'Organization',
+      name: 'Organismo Agenti e Mediatori (OAM)',
+      url: 'https://www.organismo-am.it',
+    },
+  ],
+  hasCredential: {
+    '@type': 'EducationalOccupationalCredential',
+    name: 'Iscrizione OAM - Mediatore Creditizio',
+    credentialCategory: 'Licenza professionale',
+  },
+  knowsAbout: [
+    'Mutui prima casa',
+    'Mediazione creditizia',
+    'Cessione del quinto',
+    'Prestiti personali',
+    'Finanziamenti aziendali',
+    'Surroga mutuo',
+    'Consolidamento debiti',
+  ],
+  sameAs: [],
+  disambiguatingDescription:
+    'Affiliato Credipass per la Sardegna, distinto dalla rete nazionale Credipass.',
+};
+
+const websiteLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  '@id': `${SITE_URL}/#website`,
+  url: SITE_URL,
+  name: 'Riccardo Dettori – Mediatore Creditizio Credipass',
+  inLanguage: locale,
+  publisher: { '@id': `${SITE_URL}/#riccardo-dettori` },
+};
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE_URL}${localePath(locale)}` },
+    ...(pathSuffix
+      ? [{ '@type': 'ListItem', position: 2, name: pathSuffix, item: canonical }]
+      : []),
+  ],
+};
+
+const faqLd = faqJsonLd && faqJsonLd.length
+  ? {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: faqJsonLd.map(({ question, answer }) => ({
+        '@type': 'Question',
+        name: question,
+        acceptedAnswer: { '@type': 'Answer', text: answer },
+      })),
+    }
+  : null;
+---
+
+<!doctype html>
+<html lang={locale} dir={dir} class="scroll-pt-20">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#1B2D55" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.svg" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://www.credipass.it" />
+    <link rel="dns-prefetch" href="https://wa.me" />
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700&display=swap"
+    />
+
+    <SEO
+      title={title}
+      description={description}
+      canonical={canonical}
+      openGraph={{
+        basic: {
+          title,
+          type: 'website',
+          image: `${SITE_URL}/og-cover.svg`,
+          url: canonical,
+        },
+        optional: {
+          description,
+          siteName: 'Riccardo Dettori – Credipass',
+          locale,
+        },
+      }}
+      twitter={{
+        card: 'summary_large_image',
+        title,
+        description,
+        image: `${SITE_URL}/og-cover.svg`,
+      }}
+      extend={{
+        meta: [
+          { name: 'author', content: 'Riccardo Dettori' },
+          { property: 'og:image:type', content: 'image/svg+xml' },
+          { property: 'og:image:width', content: '1200' },
+          { property: 'og:image:height', content: '630' },
+          {
+            name: 'robots',
+            content: fallback
+              ? 'noindex,follow'
+              : 'index,follow,max-snippet:-1,max-image-preview:large',
+          },
+          { name: 'format-detection', content: 'telephone=no' },
+        ],
+        link: hreflangs.map(({ lang, href }) => ({
+          rel: 'alternate',
+          hreflang: lang,
+          href,
+        })).concat([{
+          rel: 'alternate',
+          hreflang: 'x-default',
+          href: `${SITE_URL}${localePath(DEFAULT_LOCALE, pathSuffix)}`,
+        }]),
+      }}
+    />
+
+    <script type="application/ld+json" set:html={JSON.stringify(personLd)} />
+    <script type="application/ld+json" set:html={JSON.stringify(websiteLd)} />
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbLd)} />
+    {faqLd && <script type="application/ld+json" set:html={JSON.stringify(faqLd)} />}
+  </head>
+  <body>
+    <a
+      href="#main"
+      class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:rounded-full focus:bg-navy focus:px-4 focus:py-2 focus:text-white"
+    >
+      {t.nav.skipToContent}
+    </a>
+
+    {fallback && (
+      <div class="bg-gold/15 text-navy text-[11px] sm:text-xs text-center px-4 py-1.5 border-b border-gold/30">
+        🇮🇹 Translation in progress for this language — content shown in Italian.
+      </div>
+    )}
+
+    <slot />
+
+    <script is:inline>
+      // Lightweight reveal-on-scroll
+      (() => {
+        if (typeof window === 'undefined') return;
+        const els = document.querySelectorAll('[data-reveal]');
+        if (els.length) {
+          if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            els.forEach((e) => e.classList.add('is-revealed'));
+          } else {
+            const io = new IntersectionObserver(
+              (entries) => {
+                entries.forEach((entry) => {
+                  if (entry.isIntersecting) {
+                    entry.target.classList.add('is-revealed');
+                    io.unobserve(entry.target);
+                  }
+                });
+              },
+              { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
+            );
+            els.forEach((el) => io.observe(el));
+          }
+        }
+      })();
+
+      // Bottom-sheet open/close — delegates by [data-open-sheet="<id>"] / [data-sheet-close]
+      (() => {
+        if (typeof window === 'undefined') return;
+        const openSheet = (id) => {
+          const dlg = document.getElementById(id);
+          if (!dlg || typeof dlg.showModal !== 'function') return;
+          dlg.showModal();
+          document.body.style.overflow = 'hidden';
+        };
+        const closeSheet = (dlg) => {
+          if (!dlg) return;
+          dlg.close();
+          document.body.style.overflow = '';
+        };
+        document.addEventListener('click', (e) => {
+          const trigger = e.target.closest('[data-open-sheet]');
+          if (trigger) {
+            e.preventDefault();
+            openSheet(trigger.getAttribute('data-open-sheet'));
+            return;
+          }
+          const closeBtn = e.target.closest('[data-sheet-close]');
+          if (closeBtn) {
+            const dlg = closeBtn.closest('dialog[data-sheet]');
+            closeSheet(dlg);
+            return;
+          }
+          // Click on the backdrop (outside the panel) closes the sheet.
+          const dlg = e.target.closest('dialog[data-sheet]');
+          if (dlg && e.target === dlg) {
+            const panel = dlg.querySelector('[data-sheet-panel]');
+            const rect = panel?.getBoundingClientRect();
+            if (rect) {
+              const x = e.clientX, y = e.clientY;
+              const inside = x >= rect.left && x <= rect.right && y >= rect.top && y <= rect.bottom;
+              if (!inside) closeSheet(dlg);
+            }
+          }
+        });
+        document.addEventListener('close', (e) => {
+          if (e.target && e.target.matches && e.target.matches('dialog[data-sheet]')) {
+            document.body.style.overflow = '';
+          }
+        }, true);
+      })();
+    </script>
+  </body>
+</html>

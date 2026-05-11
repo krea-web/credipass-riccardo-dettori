@@ -1,0 +1,46 @@
+---
+import { LOCALES, localePath, type Locale } from '../../config/i18n';
+import { getDictionary } from '../../utils/i18n';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import MobileBottomBar from '../../components/MobileBottomBar.astro';
+
+export function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+const t = getDictionary(locale);
+---
+
+<BaseLayout
+  locale={locale}
+  pageKey="privacy"
+  pathSuffix="privacy"
+  titleOverride={`${t.privacy.title} | Riccardo Dettori`}
+  descriptionOverride={t.privacy.subtitle}
+>
+  <Navbar locale={locale} />
+  <main id="main" class="pt-32 pb-20">
+    <article class="container-page max-w-3xl">
+      <a href={localePath(locale)} class="text-sm font-medium text-navy/70 hover:text-gold-500 inline-flex items-center gap-1.5">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+        {t.privacy.back}
+      </a>
+      <h1 class="mt-6 font-display text-display-lg text-navy">{t.privacy.title}</h1>
+      <p class="mt-4 lead">{t.privacy.subtitle}</p>
+
+      <div class="mt-10 space-y-8">
+        {t.privacy.body.map((sec) => (
+          <section>
+            <h2 class="font-display text-xl text-navy">{sec.h}</h2>
+            <p class="mt-3 text-ink/75 leading-relaxed">{sec.p}</p>
+          </section>
+        ))}
+      </div>
+    </article>
+  </main>
+  <Footer locale={locale} />
+  <MobileBottomBar locale={locale} />
+</BaseLayout>

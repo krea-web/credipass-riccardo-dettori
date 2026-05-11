@@ -1,0 +1,91 @@
+---
+import Icon from './Icon.astro';
+import { CREDIPASS_CTA_URL, CONTACT } from '../config/seo';
+import { getDictionary } from '../utils/i18n';
+import type { Locale } from '../config/i18n';
+
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const t = getDictionary(locale);
+---
+
+<section class="relative isolate overflow-hidden bg-navy-grain text-white" data-hero>
+  <div class="absolute inset-0 pattern-dots opacity-40 pointer-events-none" aria-hidden="true"></div>
+  <div
+    class="absolute -top-32 right-[-15%] h-[420px] w-[420px] rounded-full bg-gold-gradient opacity-[0.14] blur-3xl pointer-events-none"
+    aria-hidden="true"
+  ></div>
+
+  <div class="container-page relative pt-28 sm:pt-32 lg:pt-40 pb-16 sm:pb-24">
+    <div class="grid lg:grid-cols-[1.15fr,0.85fr] gap-10 lg:gap-16 items-center">
+      <div data-reveal>
+        <span class="eyebrow on-dark">{t.hero.eyebrow}</span>
+        <h1 class="mt-4 sm:mt-5 font-display text-[clamp(2.25rem,8vw,4.75rem)] leading-[1.05] tracking-tight text-white">
+          {t.hero.title}<span class="block text-gold-300">{t.hero.titleAccent}</span>
+        </h1>
+        <p class="mt-5 sm:mt-6 text-base sm:text-lg lg:text-xl text-white/80 max-w-xl leading-relaxed">
+          {t.hero.subtitle}
+        </p>
+
+        <div class="mt-7 sm:mt-9 flex flex-col sm:flex-row sm:flex-wrap gap-3 sm:gap-3.5">
+          <a href={CREDIPASS_CTA_URL} target="_blank" rel="noopener" class="btn-on-dark-primary text-base !py-4 !px-7 w-full sm:w-auto">
+            {t.hero.ctaPrimary}
+            <Icon name="chevron-right" size={14} strokeWidth={3} />
+          </a>
+          <a
+            href={CONTACT.whatsappHref}
+            target="_blank"
+            rel="noopener"
+            class="btn !py-4 !px-7 w-full sm:w-auto bg-[#25D366] text-white hover:bg-[#1DA851]"
+          >
+            <Icon name="whatsapp" size={16} />
+            {t.hero.ctaTertiary}
+          </a>
+          <a href="#chi-sono" class="btn-on-dark-secondary w-full sm:w-auto">{t.hero.ctaSecondary}</a>
+        </div>
+
+        <ul class="mt-8 sm:mt-10 flex flex-wrap gap-2 sm:gap-2.5">
+          {[t.hero.trustBadges.oam, t.hero.trustBadges.credipass, t.hero.trustBadges.free].map((b) => (
+            <li class="chip">
+              <Icon name="check" size={12} strokeWidth={3} class="text-gold-300" />
+              {b}
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div class="relative order-first lg:order-none" data-reveal>
+        <div class="relative mx-auto aspect-[4/5] w-full max-w-[280px] sm:max-w-md rounded-3xl overflow-hidden border border-white/15 shadow-lift bg-gradient-to-br from-navy-600 to-navy-800">
+          <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
+            <div class="h-24 w-24 sm:h-32 sm:w-32 rounded-full bg-gold-gradient flex items-center justify-center text-navy font-display font-bold text-3xl sm:text-5xl shadow-gold">
+              RD
+            </div>
+            <p class="mt-4 sm:mt-6 text-[11px] sm:text-sm uppercase tracking-[0.2em] text-white/60">[Foto professionale]</p>
+          </div>
+          <div class="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-navy-900/80 to-transparent" aria-hidden="true"></div>
+        </div>
+
+        <div class="absolute -left-2 sm:-left-8 bottom-4 sm:bottom-6 max-w-[200px] sm:max-w-[220px] rounded-2xl bg-white/95 p-3.5 sm:p-4 shadow-lift">
+          <div class="flex items-center gap-2 text-[10px] uppercase tracking-[0.18em] text-gold-700 font-semibold">
+            <span class="h-2 w-2 rounded-full bg-gold animate-pulse"></span>
+            Iscrizione OAM
+          </div>
+          <p class="mt-1.5 text-xs leading-snug text-navy/80">
+            Mediatore creditizio certificato, vigilato da Banca d'Italia.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <a
+      href="#chi-sono"
+      class="hidden sm:flex items-center gap-2 mt-12 lg:mt-16 text-xs uppercase tracking-[0.18em] text-white/55 hover:text-white/85 transition-colors w-fit mx-auto"
+      aria-label={t.hero.scrollHint}
+    >
+      <span>{t.hero.scrollHint}</span>
+      <span class="inline-flex h-6 w-6 items-center justify-center rounded-full border border-white/25 animate-bounce" style="animation-duration:1.6s">
+        <Icon name="chevron-down" size={12} strokeWidth={2.5} />
+      </span>
+    </a>
+  </div>
+</section>

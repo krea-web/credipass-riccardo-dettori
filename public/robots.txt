@@ -1,0 +1,20 @@
+User-agent: *
+Allow: /
+Allow: /it/
+Allow: /en/
+
+# Other locales are still served (fallback to Italian copy) but should NOT be
+# indexed until professional translations land — they would otherwise count as
+# duplicate / thin content and dilute the IT signal.
+Disallow: /de/
+Disallow: /fr/
+Disallow: /es/
+Disallow: /pt/
+Disallow: /ar/
+Disallow: /zh/
+Disallow: /ru/
+Disallow: /ja/
+Disallow: /api/
+Disallow: /_astro/
+
+Sitemap: https://www.riccardodettori.it/sitemap-index.xml
