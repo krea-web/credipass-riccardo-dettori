@@ -1,0 +1,316 @@
+/* =========================================================================
+   Credipass IG Carousel design system
+   1080x1350 (4:5 IG) · navy #1B2D55 + gold #F5A623 · Fraunces + Manrope
+   Critical content kept within a 90px left/right safe area (IG crops feed
+   thumbs to 1:1, so center-safety matters).
+   ========================================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,800&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --navy: #1B2D55;
+  --navy-deep: #0C172C;
+  --navy-50: #EEF1F8;
+  --navy-100: #D6DCEC;
+  --gold: #F5A623;
+  --gold-deep: #D88B0A;
+  --gold-300: #F7BE53;
+  --gold-100: #FCE9C2;
+  --offwhite: #F8F7F4;
+  --ink: #1A1A2E;
+  --muted: #6B7280;
+  --safe: 96px;
+  --safe-y: 110px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body {
+  background: #2a2a2a;
+  font-family: 'Manrope', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+body { display: flex; flex-direction: column; align-items: center; gap: 40px; padding: 40px 0; }
+
+/* =================== Frame =================== */
+.slide {
+  width: 1080px;
+  height: 1350px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Manrope', system-ui, sans-serif;
+}
+.slide.dark   { background: linear-gradient(180deg, #1B2D55 0%, #11203D 100%); color: white; }
+.slide.darker { background: #0C172C; color: white; }
+.slide.light  { background: var(--offwhite); color: var(--ink); }
+.slide.white  { background: #ffffff; color: var(--ink); }
+.slide.gold   { background: linear-gradient(135deg, var(--gold) 0%, var(--gold-deep) 100%); color: var(--navy); }
+
+/* =================== Patterns & glows =================== */
+.pattern-dots {
+  position: absolute; inset: 0;
+  background-image: radial-gradient(rgba(255,255,255,0.06) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+.pattern-dots.on-light {
+  background-image: radial-gradient(rgba(27,45,85,0.06) 1px, transparent 1px);
+}
+.glow {
+  position: absolute; width: 700px; height: 700px;
+  background: radial-gradient(circle, rgba(245,166,35,0.22) 0%, transparent 65%);
+  pointer-events: none; filter: blur(2px);
+}
+.glow.tr { top: -260px; right: -240px; }
+.glow.bl { bottom: -300px; left: -260px; }
+.glow.center { top: -200px; left: 50%; transform: translateX(-50%); }
+
+/* =================== Content frame =================== */
+.content {
+  position: relative; z-index: 2;
+  padding: var(--safe-y) var(--safe);
+  flex: 1; display: flex; flex-direction: column;
+}
+.content.center { justify-content: center; }
+.content.bottom { justify-content: flex-end; }
+
+/* =================== Eyebrow =================== */
+.eyebrow {
+  display: inline-flex; align-items: center; gap: 16px;
+  font-size: 18px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase;
+  color: var(--gold-deep);
+}
+.eyebrow::before {
+  content: ''; height: 2px; width: 40px; background: currentColor;
+  display: inline-block;
+}
+.eyebrow.on-dark { color: var(--gold-300); }
+.eyebrow.on-gold { color: var(--navy); }
+
+/* =================== Typography =================== */
+.h-display {
+  font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
+  font-weight: 700;
+  font-size: 108px; line-height: 1.02; letter-spacing: -1.8px;
+}
+.h-1 {
+  font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
+  font-weight: 700;
+  font-size: 84px; line-height: 1.05; letter-spacing: -1.4px;
+}
+.h-2 {
+  font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
+  font-weight: 600;
+  font-size: 64px; line-height: 1.1; letter-spacing: -0.8px;
+}
+.h-3 {
+  font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
+  font-weight: 600;
+  font-size: 48px; line-height: 1.15; letter-spacing: -0.4px;
+}
+.accent { color: var(--gold-300); }
+.dark .accent { color: var(--gold-300); }
+.light .accent { color: var(--gold-deep); }
+.white .accent { color: var(--gold-deep); }
+
+.lead { font-size: 32px; line-height: 1.45; font-weight: 400; }
+.lead.muted { opacity: 0.78; }
+.body { font-size: 28px; line-height: 1.55; font-weight: 400; }
+.body.muted { opacity: 0.72; }
+.body.tight { font-size: 24px; line-height: 1.5; }
+.small { font-size: 18px; line-height: 1.4; }
+.tiny { font-size: 14px; line-height: 1.35; letter-spacing: 0.5px; }
+
+/* =================== Big numeral =================== */
+.numeral {
+  font-family: 'Fraunces', Georgia, serif; font-weight: 800;
+  font-size: 360px; line-height: 0.9; color: var(--gold);
+  letter-spacing: -8px;
+}
+.numeral.outline {
+  -webkit-text-stroke: 4px var(--gold);
+  color: transparent;
+}
+
+/* =================== Big stat (for stat posts) =================== */
+.big-stat {
+  font-family: 'Fraunces', Georgia, serif; font-weight: 800;
+  font-size: 280px; line-height: 1; color: var(--gold);
+  letter-spacing: -6px;
+}
+.big-stat.tight { font-size: 220px; }
+.big-stat .unit { font-size: 0.4em; vertical-align: super; letter-spacing: -2px; }
+.big-stat .plus { font-size: 0.6em; color: var(--gold-300); }
+
+/* =================== Bullet list =================== */
+.bullets { display: flex; flex-direction: column; gap: 22px; }
+.bullet {
+  display: flex; align-items: flex-start; gap: 20px;
+  font-size: 28px; line-height: 1.5; font-weight: 500;
+}
+.bullet .dot {
+  width: 32px; height: 32px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--gold), var(--gold-deep));
+  flex: none; display: inline-flex; align-items: center; justify-content: center;
+  color: var(--navy); margin-top: 6px;
+}
+.bullets.light .bullet { color: var(--ink); }
+
+/* =================== Card list (mini items) =================== */
+.card-list { display: grid; gap: 16px; }
+.card-mini {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 22px;
+  padding: 26px 30px;
+  display: flex; align-items: center; gap: 22px;
+}
+.card-mini.on-light {
+  background: white; border-color: rgba(27,45,85,0.08);
+  box-shadow: 0 2px 8px rgba(27,45,85,0.04);
+}
+.card-mini .index {
+  font-family: 'Fraunces', Georgia, serif; font-weight: 700;
+  font-size: 30px; color: var(--gold-300); flex: none; min-width: 50px;
+}
+.card-mini.on-light .index { color: var(--gold-deep); }
+.card-mini .label { font-size: 24px; font-weight: 600; }
+.card-mini .arrow { margin-left: auto; opacity: 0.45; }
+
+/* =================== Icon badge =================== */
+.icon-badge {
+  width: 110px; height: 110px;
+  border-radius: 28px;
+  background: linear-gradient(135deg, var(--gold), var(--gold-deep));
+  color: var(--navy);
+  display: inline-flex; align-items: center; justify-content: center;
+  box-shadow: 0 12px 30px rgba(245,166,35,0.35);
+}
+.icon-badge.outline {
+  background: transparent; border: 3px solid var(--gold-300); color: var(--gold-300);
+  box-shadow: none;
+}
+.icon-badge svg { width: 56px; height: 56px; }
+.icon-badge.sm { width: 80px; height: 80px; border-radius: 20px; }
+.icon-badge.sm svg { width: 40px; height: 40px; }
+
+/* =================== Comparison columns =================== */
+.compare { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 18px; align-items: stretch; }
+.compare .col {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 24px;
+  padding: 28px 22px;
+  display: flex; flex-direction: column;
+}
+.compare .col.featured {
+  background: rgba(245,166,35,0.12);
+  border-color: rgba(245,166,35,0.55);
+}
+.compare .col .col-title {
+  font-family: 'Fraunces', Georgia, serif; font-weight: 700;
+  font-size: 30px; color: white; line-height: 1.1;
+}
+.compare .col.featured .col-title { color: var(--gold-300); }
+.compare .col .col-body { margin-top: 14px; font-size: 18px; line-height: 1.5; opacity: 0.82; }
+
+/* =================== Chips =================== */
+.chip-row { display: flex; flex-wrap: wrap; gap: 12px; }
+.chip {
+  display: inline-flex; align-items: center; gap: 10px;
+  background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 999px; padding: 12px 22px;
+  font-size: 18px; font-weight: 600;
+}
+.chip.on-light {
+  background: white; border-color: rgba(27,45,85,0.1); color: var(--navy);
+}
+.chip .check {
+  width: 20px; height: 20px; border-radius: 50%;
+  background: var(--gold); color: var(--navy); flex: none;
+  display: inline-flex; align-items: center; justify-content: center;
+}
+.chip .check svg { width: 12px; height: 12px; }
+
+/* =================== Footer brand strip =================== */
+.brand-strip {
+  position: absolute; left: var(--safe); right: var(--safe); bottom: 64px;
+  display: flex; align-items: center; justify-content: space-between;
+  z-index: 3;
+}
+.brand-mark { display: flex; align-items: center; gap: 16px; }
+.brand-mark .logo {
+  width: 56px; height: 56px; border-radius: 14px;
+  background: linear-gradient(135deg, var(--gold), var(--gold-deep));
+  display: inline-flex; align-items: center; justify-content: center;
+  font-family: 'Fraunces', Georgia, serif; font-weight: 800; font-size: 24px; color: var(--navy);
+}
+.brand-mark .meta { display: flex; flex-direction: column; line-height: 1.2; }
+.brand-mark .meta .name { font-size: 20px; font-weight: 700; }
+.brand-mark .meta .role { font-size: 13px; opacity: 0.55; letter-spacing: 2.2px; text-transform: uppercase; margin-top: 2px; }
+
+.swipe-hint {
+  display: inline-flex; align-items: center; gap: 12px;
+  font-size: 15px; font-weight: 700; text-transform: uppercase; letter-spacing: 2.5px;
+  opacity: 0.65;
+}
+.swipe-hint .arrow {
+  width: 38px; height: 38px; border-radius: 50%;
+  border: 2px solid currentColor;
+  display: inline-flex; align-items: center; justify-content: center;
+}
+
+/* =================== Stat label =================== */
+.stat-label {
+  margin-top: 24px;
+  font-size: 28px; line-height: 1.35; font-weight: 600;
+  max-width: 720px;
+}
+
+/* =================== CTA boxes =================== */
+.cta-pill {
+  display: inline-flex; align-items: center; gap: 14px;
+  padding: 24px 36px;
+  background: linear-gradient(135deg, var(--gold), var(--gold-deep));
+  color: var(--navy);
+  border-radius: 999px;
+  font-size: 24px; font-weight: 700;
+  box-shadow: 0 12px 30px rgba(245,166,35,0.35);
+}
+.cta-pill.outline {
+  background: transparent; color: white;
+  border: 2px solid rgba(255,255,255,0.4);
+  box-shadow: none;
+}
+
+/* =================== Big quote =================== */
+.quote-mark {
+  font-family: 'Fraunces', Georgia, serif; font-weight: 800;
+  font-size: 260px; line-height: 0.6; color: var(--gold-300);
+  opacity: 0.45;
+}
+.quote-text {
+  font-family: 'Fraunces', Georgia, serif; font-weight: 600; font-style: italic;
+  font-size: 64px; line-height: 1.18; letter-spacing: -0.8px;
+}
+
+/* =================== Misc helpers =================== */
+.mt-xs { margin-top: 12px; }
+.mt-sm { margin-top: 20px; }
+.mt-md { margin-top: 32px; }
+.mt-lg { margin-top: 56px; }
+.mt-xl { margin-top: 80px; }
+.row { display: flex; align-items: center; gap: 20px; }
+.col-stack { display: flex; flex-direction: column; gap: 20px; }
+
+/* Safe-area outline visible only when ?guides=1 in URL */
+[data-guides] .slide::after {
+  content: ''; position: absolute; inset: var(--safe-y) var(--safe);
+  border: 1px dashed rgba(245,166,35,0.45); pointer-events: none;
+}
+
+/* Slide label (only on screen, not in screenshot) */
+.slide-label {
+  font-family: 'Manrope', sans-serif; color: #ddd; font-size: 14px;
+  letter-spacing: 1.5px; text-transform: uppercase;
+}
