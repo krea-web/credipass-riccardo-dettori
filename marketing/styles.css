@@ -248,6 +248,17 @@ body { display: flex; flex-direction: column; align-items: center; gap: 40px; pa
 .brand-mark .meta { display: flex; flex-direction: column; line-height: 1.2; }
 .brand-mark .meta .name { font-size: 20px; font-weight: 700; }
 .brand-mark .meta .role { font-size: 13px; opacity: 0.55; letter-spacing: 2.2px; text-transform: uppercase; margin-top: 2px; }
+.brand-logo {
+  height: 36px; width: auto; margin-left: 22px;
+  padding-left: 22px; border-left: 1px solid rgba(255,255,255,0.18);
+  filter: brightness(0) invert(1) brightness(1.15); /* render the navy logo as white on dark slides */
+  opacity: 0.9;
+}
+.brand-logo-light {
+  filter: none; /* keep original navy on light/gold slides */
+  border-left-color: rgba(27,45,85,0.15);
+  opacity: 1;
+}
 
 .swipe-hint {
   display: inline-flex; align-items: center; gap: 12px;
@@ -314,3 +325,240 @@ body { display: flex; flex-direction: column; align-items: center; gap: 40px; pa
   font-family: 'Manrope', sans-serif; color: #ddd; font-size: 14px;
   letter-spacing: 1.5px; text-transform: uppercase;
 }
+
+/* =========================================================================
+   DEVICE MOCKUPS — laptop / phone / tablet (pure CSS + inline content)
+   Each mockup is a "frame" containing a `.screen` slot you fill with markup.
+   ========================================================================= */
+
+/* ----- Laptop ----- */
+.dev-laptop { width: 560px; position: relative; display: block; }
+.dev-laptop .lid {
+  background: #11203D; border-radius: 18px 18px 6px 6px;
+  padding: 20px 20px 16px;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.08);
+}
+.dev-laptop .screen {
+  background: white; border-radius: 10px; aspect-ratio: 16/10;
+  overflow: hidden; position: relative;
+}
+.dev-laptop .base {
+  width: 115%; height: 16px;
+  background: linear-gradient(180deg, #1A2848 0%, #0C172C 100%);
+  margin: 0 auto; margin-left: -7.5%;
+  border-radius: 0 0 22px 22px;
+  position: relative;
+}
+.dev-laptop .base::after {
+  content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+  width: 100px; height: 6px; background: #0C172C;
+  border-radius: 0 0 10px 10px;
+}
+
+/* ----- Phone ----- */
+.dev-phone { width: 260px; position: relative; display: block; }
+.dev-phone .body {
+  background: #11203D; border-radius: 38px; padding: 14px;
+  box-shadow: 0 28px 50px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.06);
+  position: relative;
+}
+.dev-phone .screen {
+  background: white; border-radius: 26px; aspect-ratio: 9/19.5;
+  overflow: hidden; position: relative;
+}
+.dev-phone .notch {
+  position: absolute; top: 22px; left: 50%; transform: translateX(-50%);
+  width: 90px; height: 28px; background: #11203D; border-radius: 0 0 14px 14px; z-index: 3;
+}
+.dev-phone .notch::after {
+  content: ''; position: absolute; top: 9px; left: 50%; transform: translateX(-50%);
+  width: 8px; height: 8px; background: #283A60; border-radius: 50%;
+}
+
+/* ----- Tablet ----- */
+.dev-tablet { width: 380px; position: relative; display: block; }
+.dev-tablet .body {
+  background: #11203D; border-radius: 26px; padding: 18px;
+  box-shadow: 0 28px 50px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.06);
+}
+.dev-tablet .screen {
+  background: white; border-radius: 14px; aspect-ratio: 4/5.5;
+  overflow: hidden; position: relative;
+}
+
+/* ----- Screen content helpers (shared inside mockups) ----- */
+.scr-pad { padding: 18px 20px; height: 100%; box-sizing: border-box; display: flex; flex-direction: column; gap: 14px; }
+.scr-pad.tight { padding: 14px 16px; gap: 10px; }
+.scr-pill {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: 'Manrope', sans-serif; font-size: 12px; font-weight: 700;
+  background: #1B2D55; color: white; padding: 5px 12px; border-radius: 999px;
+  letter-spacing: 0.5px; text-transform: uppercase;
+}
+.scr-h {
+  font-family: 'Fraunces', Georgia, serif; font-weight: 700;
+  font-size: 22px; line-height: 1.15; color: #1B2D55; letter-spacing: -0.3px;
+}
+.scr-h.lg { font-size: 28px; }
+.scr-h .ac { color: #D88B0A; }
+.scr-sub {
+  font-family: 'Manrope', sans-serif; font-size: 12px; line-height: 1.45;
+  color: rgba(26,26,46,0.65);
+}
+.scr-row {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 10px 14px; border-radius: 12px; background: #F8F7F4;
+  font-family: 'Manrope', sans-serif;
+}
+.scr-row .label { font-size: 11px; color: #6B7280; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; }
+.scr-row .val { font-family: 'Fraunces', serif; font-size: 17px; color: #1B2D55; font-weight: 700; }
+.scr-row.gold { background: linear-gradient(135deg, #F5A623 0%, #D88B0A 100%); }
+.scr-row.gold .label { color: rgba(27,45,85,0.7); }
+.scr-row.gold .val { color: #1B2D55; }
+.scr-row.dark { background: #1B2D55; }
+.scr-row.dark .label { color: rgba(255,255,255,0.6); }
+.scr-row.dark .val { color: #F7BE53; }
+.scr-cta {
+  display: flex; align-items: center; justify-content: center; gap: 6px;
+  padding: 12px; border-radius: 12px;
+  background: linear-gradient(135deg, #F5A623 0%, #D88B0A 100%);
+  color: #1B2D55; font-family: 'Manrope', sans-serif; font-weight: 700;
+  font-size: 14px; letter-spacing: 0.3px;
+}
+
+/* =========================================================================
+   CHARTS — inline svg helpers
+   ========================================================================= */
+
+/* Bar chart */
+.chart-bars { display: flex; align-items: flex-end; gap: 14px; height: 100%; }
+.chart-bars .bar {
+  flex: 1; background: linear-gradient(180deg, #F5A623, #D88B0A);
+  border-radius: 8px 8px 4px 4px; min-width: 18px; position: relative;
+}
+.chart-bars .bar.muted { background: #E8E5DE; }
+.chart-bars .bar.dark { background: #1B2D55; }
+.chart-bars .bar .val {
+  position: absolute; top: -22px; left: 50%; transform: translateX(-50%);
+  font-family: 'Fraunces', serif; font-weight: 700; color: #1B2D55; font-size: 14px;
+}
+.chart-bars .bar .lbl {
+  position: absolute; bottom: -22px; left: 50%; transform: translateX(-50%);
+  font-family: 'Manrope', sans-serif; font-size: 11px; color: #6B7280;
+  font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase;
+}
+
+/* Donut */
+.chart-donut { width: 220px; height: 220px; position: relative; }
+.chart-donut svg { width: 100%; height: 100%; transform: rotate(-90deg); }
+.chart-donut .center {
+  position: absolute; inset: 0; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; text-align: center;
+}
+.chart-donut .center .v {
+  font-family: 'Fraunces', serif; font-weight: 800; font-size: 56px;
+  line-height: 1; color: #1B2D55;
+}
+.chart-donut .center .l {
+  font-family: 'Manrope', sans-serif; font-size: 12px; color: #6B7280;
+  margin-top: 6px; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 700;
+}
+
+/* ----- Banks grid (logos placeholder) ----- */
+.banks-grid {
+  display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px;
+}
+.banks-grid .b {
+  aspect-ratio: 2/1; border-radius: 12px;
+  background: white; border: 1px solid rgba(27,45,85,0.1);
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Fraunces', serif; color: #1B2D55; font-weight: 700; font-size: 17px;
+  opacity: 0.85;
+}
+.banks-grid .b.dark { background: #1B2D55; color: #F7BE53; border-color: transparent; opacity: 1; }
+.banks-grid .b.gold { background: linear-gradient(135deg, #F5A623, #D88B0A); color: #1B2D55; border-color: transparent; opacity: 1; }
+
+/* ----- Story illustration block (icon + halo) ----- */
+.illu {
+  width: 280px; height: 280px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, rgba(245,166,35,0.25), transparent 65%),
+              linear-gradient(135deg, rgba(255,255,255,0.04), rgba(255,255,255,0.0));
+  display: flex; align-items: center; justify-content: center;
+  position: relative;
+}
+.illu.on-light {
+  background: radial-gradient(circle at 30% 30%, rgba(245,166,35,0.18), transparent 65%),
+              radial-gradient(circle at 70% 80%, rgba(27,45,85,0.05), transparent 50%);
+}
+.illu::before {
+  content: ''; position: absolute; inset: 30px; border-radius: 50%;
+  border: 1px dashed rgba(245,166,35,0.35);
+}
+.illu svg { width: 130px; height: 130px; }
+
+/* ----- "Status" badge (approved / declined) ----- */
+.status-tag {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 14px 22px; border-radius: 999px;
+  font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 18px;
+  letter-spacing: 0.5px;
+}
+.status-tag.declined {
+  background: rgba(220, 38, 38, 0.12); color: #B91C1C; border: 1px solid rgba(220, 38, 38, 0.3);
+}
+.status-tag.approved {
+  background: rgba(16, 185, 129, 0.14); color: #047857; border: 1px solid rgba(16, 185, 129, 0.35);
+}
+.status-tag .ico {
+  width: 22px; height: 22px; border-radius: 50%;
+  background: currentColor; color: white;
+  display: inline-flex; align-items: center; justify-content: center;
+}
+
+/* ----- Step ladder (used for case study journey) ----- */
+.step-ladder { display: flex; flex-direction: column; gap: 18px; }
+.step-ladder .row {
+  display: flex; align-items: center; gap: 18px;
+  padding: 18px 22px; border-radius: 18px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.12);
+}
+.step-ladder .row.on-light {
+  background: white;
+  border: 1px solid rgba(27,45,85,0.08);
+  box-shadow: 0 2px 8px rgba(27,45,85,0.04);
+}
+.step-ladder .row .n {
+  width: 42px; height: 42px; border-radius: 50%;
+  background: linear-gradient(135deg, #F5A623, #D88B0A); color: #1B2D55;
+  display: inline-flex; align-items: center; justify-content: center;
+  font-family: 'Fraunces', serif; font-weight: 800; font-size: 20px; flex: none;
+}
+.step-ladder .row .t {
+  font-family: 'Manrope', sans-serif; font-weight: 600; font-size: 20px;
+  color: white;
+}
+.step-ladder .row.on-light .t { color: #1B2D55; }
+
+/* ----- Speech-bubble quote tile ----- */
+.speech-tile {
+  display: inline-flex; flex-direction: column; gap: 14px;
+  padding: 28px 32px; border-radius: 28px;
+  background: white; box-shadow: 0 20px 40px rgba(11,17,32,0.18);
+  position: relative; max-width: 760px;
+}
+.speech-tile::after {
+  content: ''; position: absolute; bottom: -18px; left: 60px;
+  border: 20px solid transparent;
+  border-top-color: white; border-bottom: 0;
+}
+.speech-tile .body {
+  font-family: 'Fraunces', serif; font-style: italic; font-weight: 500;
+  font-size: 26px; line-height: 1.35; color: #1B2D55;
+}
+.speech-tile .who {
+  font-family: 'Manrope', sans-serif; font-size: 13px; color: #6B7280;
+  font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
+}
+

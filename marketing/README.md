@@ -1,15 +1,17 @@
 # Marketing — IG carousels & post singoli
 
-Set di 23 post Instagram (4:5, 1080×1350 px) per Riccardo Dettori — Credipass.
-Branding identico al sito riccardodettori.it: navy #1B2D55 + gold #F5A623, font Fraunces (display) + Manrope (sans).
+Set di 24 post Instagram (4:5, 1080×1350 px) per Riccardo Dettori — Credipass.
+Branding identico al sito riccardodettori.it: navy #1B2D55 + gold #F5A623, logo Credipass ufficiale, font Fraunces (display) + Manrope (sans).
 
-Tutte le immagini sono **renderizzate via HTML + Edge headless**, quindi i font sono i veri Google Fonts (no fallback brutti), e tutto si può rigenerare/modificare in pochi secondi.
+Le slide non sono "pile di testo": ogni post chiave include un componente grafico — laptop/tablet/phone mockup con UI reale, line-chart sui tassi, bar-chart sulla surroga, gauge donut per il 100% LTV, orologio per il 24h, illustrazioni stilizzate per ogni capitolo del caso Giuliano (casa+chiave, banca, documento bocciato/approvato, speech bubble, combo mutuo+prestito).
+
+Tutte le immagini sono **renderizzate via HTML + Edge headless**, quindi i font sono i veri Google Fonts (no fallback brutti), il logo Credipass è il file ufficiale, e tutto si può rigenerare/modificare in pochi secondi.
 
 ---
 
 ## Contenuto
 
-### 7 caroselli (41 slide totali)
+### 8 caroselli (49 slide totali)
 
 | # | Titolo                                | Slide | Cartella                          |
 |---|---------------------------------------|-------|-----------------------------------|
@@ -20,6 +22,7 @@ Tutte le immagini sono **renderizzate via HTML + Edge headless**, quindi i font 
 | 5 | **Mutuo Surroga** · cambia banca a costo zero | 5 | `carosello-05-surroga/`         |
 | 6 | **3 step** per trovare il mutuo migliore | 5  | `carosello-06-3-step/`            |
 | 7 | **Alternative INPDAP** · PA e pensionati | 4  | `carosello-07-inpdap/`            |
+| 8 | **Il caso di Giuliano** · pratica reale (bocciato → approvato) | 8 | `carosello-08-giuliano/` |
 
 ### 16 post singoli
 
