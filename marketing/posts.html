@@ -13,6 +13,7 @@
 
 <!-- 1.1 COVER — riempita: gold ring + topographic glow + 3 floating chips -->
 <section class="slide dark" data-out="carosello-01-mutuo-casa/01-cover">
+  <div class="carousel-thread dim"></div>
   <div class="pattern-dots"></div>
   <div class="pattern-topo"></div>
   <div class="accent-ring-br"></div>
@@ -42,6 +43,7 @@
 
 <!-- 1.2 ACQUISTO -->
 <section class="slide light" data-out="carosello-01-mutuo-casa/02-acquisto">
+  <div class="carousel-thread "></div>
   <div class="pattern-dots on-light"></div>
   <div class="content">
     <span class="eyebrow">01 · Acquisto Casa</span>
@@ -97,6 +99,7 @@
 
 <!-- 1.3 COSTRUZIONE (text + crane/scaffolding scene) -->
 <section class="slide dark" data-out="carosello-01-mutuo-casa/03-costruzione">
+  <div class="carousel-thread dim"></div>
   <div class="pattern-dots"></div>
   <div class="glow bl"></div>
   <div class="content">
@@ -108,40 +111,23 @@
       <div class="bullet"><span class="dot"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Consulenza fiscale e tecnica inclusa</div>
     </div>
 
-    <!-- Construction scene: scaffold + crane silhouette -->
-    <div style="position:absolute; right:80px; bottom:130px; width:380px; pointer-events:none">
-      <svg viewBox="0 0 380 280" style="width:100%; height:auto">
-        <!-- Ground baseline -->
-        <line x1="0" y1="270" x2="380" y2="270" stroke="#F7BE53" stroke-width="2" stroke-opacity="0.3"/>
-        <!-- Building under construction (gold outline) -->
-        <rect x="120" y="100" width="160" height="170" fill="rgba(245,166,35,0.06)" stroke="#F7BE53" stroke-width="2.5" stroke-dasharray="6 6"/>
-        <!-- Floors -->
-        <line x1="120" y1="160" x2="280" y2="160" stroke="#F7BE53" stroke-width="2"/>
-        <line x1="120" y1="220" x2="280" y2="220" stroke="#F7BE53" stroke-width="2"/>
-        <!-- Scaffolding -->
-        <g stroke="#F5A623" stroke-width="2" fill="none">
-          <line x1="100" y1="120" x2="100" y2="270"/>
-          <line x1="296" y1="120" x2="296" y2="270"/>
-          <line x1="100" y1="120" x2="296" y2="120"/>
-          <line x1="100" y1="180" x2="296" y2="180"/>
-          <line x1="100" y1="240" x2="296" y2="240"/>
-          <line x1="100" y1="150" x2="296" y2="150" stroke-dasharray="3 3"/>
-          <line x1="100" y1="210" x2="296" y2="210" stroke-dasharray="3 3"/>
-        </g>
-        <!-- Crane -->
-        <g stroke="#F7BE53" stroke-width="3" fill="none">
-          <line x1="50" y1="270" x2="50" y2="40"/>
-          <line x1="20" y1="40" x2="180" y2="40"/>
-          <line x1="20" y1="40" x2="50" y2="20"/>
-          <line x1="180" y1="40" x2="50" y2="20"/>
-          <line x1="160" y1="40" x2="160" y2="100"/>
-          <rect x="148" y="100" width="24" height="14" fill="#F5A623"/>
-        </g>
-        <!-- Hard hat icon as accent -->
-        <g transform="translate(330 70)">
-          <path d="M-30,15 Q-30,-20 0,-20 Q30,-20 30,15 L-30,15 Z" fill="#F5A623" stroke="#1B2D55" stroke-width="2"/>
-          <rect x="-34" y="14" width="68" height="6" fill="#D88B0A" stroke="#1B2D55" stroke-width="1.5"/>
-        </g>
+    <!-- Construction: single bold hardhat illustration -->
+    <div style="position:absolute; right:96px; bottom:200px; width:340px; height:340px; display:flex; align-items:center; justify-content:center; pointer-events:none">
+      <div style="position:absolute; inset:0; background:radial-gradient(circle, rgba(245,166,35,0.18), transparent 65%)"></div>
+      <svg viewBox="0 0 200 200" style="width:280px; height:280px; position:relative; z-index:2; filter:drop-shadow(0 16px 32px rgba(0,0,0,0.4))">
+        <defs>
+          <linearGradient id="hat-g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F7BE53"/><stop offset="0.6" stop-color="#F5A623"/><stop offset="1" stop-color="#D88B0A"/></linearGradient>
+        </defs>
+        <!-- Hard hat dome -->
+        <path d="M30,130 Q30,40 100,40 Q170,40 170,130 Z" fill="url(#hat-g)" stroke="#1B2D55" stroke-width="3"/>
+        <!-- Brim -->
+        <path d="M18,130 L182,130 L178,148 Q100,166 22,148 Z" fill="#D88B0A" stroke="#1B2D55" stroke-width="3"/>
+        <!-- Top ridge -->
+        <path d="M30,130 Q30,60 60,46 M170,130 Q170,60 140,46 M70,42 Q100,30 130,42" fill="none" stroke="#1B2D55" stroke-width="2.5" opacity="0.5"/>
+        <!-- Center stripe -->
+        <rect x="92" y="40" width="16" height="92" fill="#1B2D55"/>
+        <!-- Brand dot -->
+        <circle cx="100" cy="100" r="10" fill="#F7BE53" stroke="#1B2D55" stroke-width="2.5"/>
       </svg>
     </div>
   </div>
@@ -158,6 +144,7 @@
 
 <!-- 1.4 RISTRUTTURAZIONE (text + paint roller / ladder / tools) -->
 <section class="slide light" data-out="carosello-01-mutuo-casa/04-ristrutturazione">
+  <div class="carousel-thread "></div>
   <div class="pattern-dots on-light"></div>
   <div class="content">
     <span class="eyebrow">03 · Ristrutturazione</span>
@@ -169,46 +156,31 @@
       <span class="chip on-light"><span class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Bonus Ristrutturazione</span>
     </div>
 
-    <!-- Renovation: paint roller + ladder + wrench -->
-    <div style="position:absolute; left:50%; bottom:160px; transform:translateX(-50%); width:620px; pointer-events:none">
-      <svg viewBox="0 0 620 220" style="width:100%; height:auto">
-        <!-- Background wall fragment with paint stroke -->
-        <rect x="200" y="20" width="240" height="160" fill="#F0EDE6" stroke="#1B2D55" stroke-width="2"/>
-        <!-- Fresh paint area top -->
-        <rect x="200" y="20" width="240" height="60" fill="#F7BE53"/>
-        <rect x="200" y="80" width="100" height="10" fill="url(#paint-drip)"/>
+    <!-- Renovation: single bold paint-roller hero -->
+    <div style="position:absolute; right:80px; bottom:200px; width:340px; height:340px; display:flex; align-items:center; justify-content:center; pointer-events:none">
+      <div style="position:absolute; inset:0; background:radial-gradient(circle, rgba(245,166,35,0.2), transparent 65%)"></div>
+      <svg viewBox="0 0 200 200" style="width:280px; height:280px; position:relative; z-index:2; filter:drop-shadow(0 16px 32px rgba(27,45,85,0.18))">
         <defs>
-          <linearGradient id="paint-drip" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0" stop-color="#F7BE53"/>
-            <stop offset="1" stop-color="#F7BE53" stop-opacity="0"/>
-          </linearGradient>
+          <linearGradient id="roller-g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F7BE53"/><stop offset="1" stop-color="#D88B0A"/></linearGradient>
         </defs>
-        <!-- Ladder -->
-        <g stroke="#1B2D55" stroke-width="3" fill="none">
-          <line x1="120" y1="200" x2="160" y2="30"/>
-          <line x1="180" y1="200" x2="140" y2="30"/>
-          <line x1="125" y1="180" x2="180" y2="180"/>
-          <line x1="130" y1="150" x2="178" y2="150"/>
-          <line x1="135" y1="120" x2="176" y2="120"/>
-          <line x1="140" y1="90" x2="174" y2="90"/>
-          <line x1="145" y1="60" x2="172" y2="60"/>
+        <!-- Fresh paint stroke trail -->
+        <path d="M30,150 Q60,130 100,135 Q140,140 170,120" fill="none" stroke="#F5A623" stroke-width="14" stroke-linecap="round" opacity="0.4"/>
+        <path d="M30,160 Q60,140 100,145 Q140,150 170,130" fill="none" stroke="#F5A623" stroke-width="14" stroke-linecap="round" opacity="0.3"/>
+        <!-- Roller -->
+        <g transform="translate(105 60) rotate(28)">
+          <rect x="-40" y="-18" width="80" height="36" rx="6" fill="url(#roller-g)" stroke="#1B2D55" stroke-width="3"/>
+          <rect x="-40" y="-22" width="80" height="6" fill="#1B2D55"/>
+          <rect x="-40" y="16" width="80" height="6" fill="#1B2D55"/>
+          <line x1="-30" y1="-12" x2="-30" y2="12" stroke="#D88B0A" stroke-width="1.5"/>
+          <line x1="-15" y1="-12" x2="-15" y2="12" stroke="#D88B0A" stroke-width="1.5"/>
+          <line x1="0" y1="-12" x2="0" y2="12" stroke="#D88B0A" stroke-width="1.5"/>
+          <line x1="15" y1="-12" x2="15" y2="12" stroke="#D88B0A" stroke-width="1.5"/>
+          <line x1="30" y1="-12" x2="30" y2="12" stroke="#D88B0A" stroke-width="1.5"/>
+          <!-- Handle -->
+          <line x1="0" y1="22" x2="-30" y2="80" stroke="#1B2D55" stroke-width="6" stroke-linecap="round"/>
         </g>
-        <!-- Paint roller above ladder -->
-        <g transform="translate(150 22)">
-          <rect x="-22" y="-12" width="44" height="14" fill="#F5A623" stroke="#1B2D55" stroke-width="2" rx="3"/>
-          <line x1="0" y1="2" x2="-12" y2="40" stroke="#1B2D55" stroke-width="3"/>
-        </g>
-        <!-- Wrench (right side) -->
-        <g transform="translate(490 150) rotate(35)">
-          <rect x="-50" y="-7" width="80" height="14" fill="#D88B0A" stroke="#1B2D55" stroke-width="2" rx="4"/>
-          <circle cx="34" cy="0" r="18" fill="#D88B0A" stroke="#1B2D55" stroke-width="2"/>
-          <circle cx="34" cy="0" r="8" fill="#F0EDE6"/>
-        </g>
-        <!-- Paint bucket -->
-        <g transform="translate(540 180)">
-          <path d="M-26,0 L-22,38 L22,38 L26,0 Z" fill="#1B2D55" stroke="#0C172C" stroke-width="2"/>
-          <ellipse cx="0" cy="0" rx="26" ry="6" fill="#F5A623" stroke="#0C172C" stroke-width="2"/>
-        </g>
+        <!-- Hand grip on handle -->
+        <rect x="40" y="125" width="32" height="20" rx="6" fill="#1B2D55" transform="rotate(28 56 135)"/>
       </svg>
     </div>
   </div>
@@ -225,6 +197,7 @@
 
 <!-- 1.5 CONSOLIDAMENTO -->
 <section class="slide dark" data-out="carosello-01-mutuo-casa/05-consolidamento">
+  <div class="carousel-thread dim"></div>
   <div class="pattern-dots"></div>
   <div class="glow tr"></div>
   <div class="content">
@@ -256,6 +229,7 @@
 
 <!-- 1.6 SOSTITUZIONE -->
 <section class="slide light" data-out="carosello-01-mutuo-casa/06-sostituzione">
+  <div class="carousel-thread "></div>
   <div class="pattern-dots on-light"></div>
   <div class="content">
     <span class="eyebrow">05 · Sostituzione</span>
@@ -280,6 +254,7 @@
 
 <!-- 1.7 LIQUIDITA -->
 <section class="slide dark" data-out="carosello-01-mutuo-casa/07-liquidita">
+  <div class="carousel-thread dim"></div>
   <div class="pattern-dots"></div>
   <div class="glow bl"></div>
   <div class="content">
@@ -307,6 +282,7 @@
 
 <!-- 1.8 SURROGA -->
 <section class="slide light" data-out="carosello-01-mutuo-casa/08-surroga">
+  <div class="carousel-thread "></div>
   <div class="pattern-dots on-light"></div>
   <div class="content">
     <span class="eyebrow">07 · Surroga</span>
@@ -330,6 +306,7 @@
 
 <!-- 1.9 COMMERCIALE -->
 <section class="slide dark" data-out="carosello-01-mutuo-casa/09-commerciale">
+  <div class="carousel-thread dim"></div>
   <div class="pattern-dots"></div>
   <div class="glow tr"></div>
   <div class="content">
@@ -357,6 +334,7 @@
 
 <!-- 1.10 CTA CLOSE -->
 <section class="slide gold" data-out="carosello-01-mutuo-casa/10-cta">
+  <div class="carousel-thread "></div>
   <div class="pattern-dots" style="opacity:0.4"></div>
   <div class="content center" style="text-align:center; align-items:center">
     <span class="eyebrow on-gold">Pronto a iniziare?</span>
@@ -386,6 +364,7 @@
 
 <!-- 2.1 COVER — riempita con 3 chips condizioni + ring -->
 <section class="slide dark" data-out="carosello-02-prestito/01-cover">
+  <div class="carousel-thread dim"></div>
   <div class="pattern-dots"></div>
   <div class="pattern-topo"></div>
   <div class="accent-ring-br"></div>
@@ -415,6 +394,7 @@
 
 <!-- 2.2 CARATTERISTICHE (con laptop mockup) -->
 <section class="slide light" data-out="carosello-02-prestito/02-caratteristiche">
+  <div class="carousel-thread "></div>
   <div class="pattern-dots on-light"></div>
   <div class="content" style="flex-direction:row; align-items:center; gap:40px">
     <div style="flex:1">
@@ -476,6 +456,7 @@
 
 <!-- 2.3 ESEMPIO (con phone mockup) -->
 <section class="slide dark" data-out="carosello-02-prestito/03-esempio">
+  <div class="carousel-thread dim"></div>
   <div class="pattern-dots"></div>
   <div class="glow tr"></div>
   <div class="content" style="flex-direction:row; align-items:center; gap:48px">
@@ -543,6 +524,7 @@
 
 <!-- 2.4 FLESSIBILITA -->
 <section class="slide light" data-out="carosello-02-prestito/04-flessibilita">
+  <div class="carousel-thread "></div>
   <div class="pattern-dots on-light"></div>
   <div class="content">
     <span class="eyebrow">Grande flessibilità</span>
@@ -567,6 +549,7 @@
 
 <!-- 2.5 ALTERNATIVA INPDAP -->
 <section class="slide dark" data-out="carosello-02-prestito/05-alternative-inpdap">
+  <div class="carousel-thread dim"></div>
   <div class="pattern-dots"></div>
   <div class="glow tr"></div>
   <div class="content">
@@ -592,6 +575,7 @@
 
 <!-- 2.6 CTA -->
 <section class="slide gold" data-out="carosello-02-prestito/06-cta">
+  <div class="carousel-thread "></div>
   <div class="pattern-dots" style="opacity:0.4"></div>
   <div class="content center" style="text-align:center; align-items:center">
     <span class="eyebrow on-gold">Inizia ora</span>
@@ -620,6 +604,7 @@
 
 <!-- 3.1 COVER -->
 <section class="slide dark" data-out="carosello-03-quinto/01-cover">
+  <div class="carousel-thread dim"></div>
   <div class="pattern-dots"></div>
   <div class="pattern-topo"></div>
   <div class="accent-ring-br"></div>
@@ -649,6 +634,7 @@
 
 <!-- 3.2 COS'E -->
 <section class="slide light" data-out="carosello-03-quinto/02-cos-e">
+  <div class="carousel-thread "></div>
   <div class="pattern-dots on-light"></div>
   <div class="content">
     <span class="eyebrow">Come funziona</span>
@@ -678,6 +664,7 @@
 
 <!-- 3.3 VANTAGGI -->
 <section class="slide dark" data-out="carosello-03-quinto/03-vantaggi">
+  <div class="carousel-thread dim"></div>
   <div class="pattern-dots"></div>
   <div class="glow tr"></div>
   <div class="content">
@@ -711,6 +698,7 @@
 
 <!-- 3.4 PER CHI -->
 <section class="slide light" data-out="carosello-03-quinto/04-per-chi">
+  <div class="carousel-thread "></div>
   <div class="pattern-dots on-light"></div>
   <div class="content">
     <span class="eyebrow">Per chi è</span>
@@ -737,6 +725,7 @@
 
 <!-- 3.5 ANCHE CON PROBLEMI -->
 <section class="slide dark" data-out="carosello-03-quinto/05-anche-problemi">
+  <div class="carousel-thread dim"></div>
   <div class="pattern-dots"></div>
   <div class="glow center"></div>
   <div class="content center">
@@ -763,6 +752,7 @@
 
 <!-- 3.6 CTA -->
 <section class="slide gold" data-out="carosello-03-quinto/06-cta">
+  <div class="carousel-thread "></div>
   <div class="pattern-dots" style="opacity:0.4"></div>
   <div class="content center" style="text-align:center; align-items:center">
     <span class="eyebrow on-gold">Una chiamata basta</span>
@@ -790,6 +780,7 @@
 
 <!-- 4.1 COVER -->
 <section class="slide dark" data-out="carosello-04-tasso/01-cover">
+  <div class="carousel-thread dim"></div>
   <div class="pattern-dots"></div>
   <div class="pattern-topo"></div>
   <div class="accent-ring-br"></div>
@@ -818,6 +809,7 @@
 
 <!-- 4.2 FISSO (con line chart piatto) -->
 <section class="slide light" data-out="carosello-04-tasso/02-fisso">
+  <div class="carousel-thread "></div>
   <div class="pattern-dots on-light"></div>
   <div class="content">
     <span class="eyebrow">Tasso fisso</span>
@@ -871,6 +863,7 @@
 
 <!-- 4.3 VARIABILE (con line chart oscillante) -->
 <section class="slide dark" data-out="carosello-04-tasso/03-variabile">
+  <div class="carousel-thread dim"></div>
   <div class="pattern-dots"></div>
   <div class="glow bl"></div>
   <div class="content">
@@ -922,6 +915,7 @@
 
 <!-- 4.4 MISTO/CAP (con chart ibrido: piatto poi oscilla, con cap) -->
 <section class="slide light" data-out="carosello-04-tasso/04-misto">
+  <div class="carousel-thread "></div>
   <div class="pattern-dots on-light"></div>
   <div class="content">
     <span class="eyebrow">Misto · Cap · Rata costante</span>
@@ -977,6 +971,7 @@
 
 <!-- 4.5 CTA -->
 <section class="slide gold" data-out="carosello-04-tasso/05-cta">
+  <div class="carousel-thread "></div>
   <div class="pattern-dots" style="opacity:0.4"></div>
   <div class="content center" style="text-align:center; align-items:center">
     <span class="eyebrow on-gold">Non sai quale scegliere?</span>
@@ -1004,6 +999,7 @@
 
 <!-- 5.1 COVER -->
 <section class="slide dark" data-out="carosello-05-surroga/01-cover">
+  <div class="carousel-thread dim"></div>
   <div class="pattern-dots"></div>
   <div class="pattern-topo"></div>
   <div class="accent-ring-br"></div>
@@ -1033,6 +1029,7 @@
 
 <!-- 5.2 COS'E -->
 <section class="slide light" data-out="carosello-05-surroga/02-cos-e">
+  <div class="carousel-thread "></div>
   <div class="pattern-dots on-light"></div>
   <div class="content">
     <span class="eyebrow">Cos'è la surroga</span>
@@ -1063,6 +1060,7 @@
 
 <!-- 5.3 COSTI ZERO -->
 <section class="slide dark" data-out="carosello-05-surroga/03-costi-zero">
+  <div class="carousel-thread dim"></div>
   <div class="pattern-dots"></div>
   <div class="glow center"></div>
   <div class="content center" style="text-align:center; align-items:center">
@@ -1090,38 +1088,39 @@
 
 <!-- 5.4 QUANDO CONVIENE (con bar chart TAEG vecchio vs nuovo) -->
 <section class="slide light" data-out="carosello-05-surroga/04-quando">
+  <div class="carousel-thread "></div>
   <div class="pattern-dots on-light"></div>
   <div class="content">
     <span class="eyebrow">Quando conviene</span>
-    <h2 class="h-1 mt-md">Differenza <span class="accent">TAEG</span><br>oltre 0,5–0,7 punti.</h2>
+    <h2 class="h-1 mt-md" style="font-size:74px; line-height:1.0">Differenza <span class="accent">TAEG</span><br>oltre 0,5–0,7 punti.</h2>
     <p class="lead muted mt-md" style="max-width:760px">Se il tuo TAEG attuale supera le offerte odierne di almeno mezzo punto, la surroga ti fa risparmiare migliaia di euro.</p>
 
-    <!-- Two-bar comparison -->
-    <div class="mt-md" style="padding:32px 36px; background:white; border:1px solid rgba(27,45,85,0.08); border-radius:22px; max-width:860px">
-      <div style="display:flex; align-items:flex-end; justify-content:space-around; gap:28px; height:220px">
-        <!-- Old TAEG -->
-        <div style="flex:1; max-width:160px; display:flex; flex-direction:column; align-items:center; gap:10px">
-          <div style="font-family:'Fraunces', serif; font-size:30px; font-weight:700; color:#1B2D55">3,8%</div>
-          <div style="width:100%; height:300px; background:linear-gradient(180deg, #6B7280, #4B5563); border-radius:10px 10px 4px 4px; position:relative">
-            <div style="position:absolute; bottom:8px; left:0; right:0; text-align:center; font-size:11px; font-weight:700; color:white; letter-spacing:1px; text-transform:uppercase">TAEG</div>
+    <!-- Two-bar comparison (properly sized chart) -->
+    <div class="mt-lg" style="padding:36px 40px; background:white; border:1px solid rgba(27,45,85,0.08); border-radius:24px; max-width:880px; box-shadow:0 4px 14px rgba(27,45,85,0.04)">
+      <div style="display:flex; align-items:flex-end; justify-content:space-around; gap:32px; height:280px">
+        <!-- Old TAEG bar (taller) -->
+        <div style="flex:1; max-width:170px; display:flex; flex-direction:column; align-items:center; gap:12px">
+          <div style="font-family:'Fraunces', serif; font-size:38px; font-weight:800; color:#1B2D55; line-height:1">3,8%</div>
+          <div style="width:100%; height:200px; background:linear-gradient(180deg, #6B7280, #4B5563); border-radius:12px 12px 4px 4px; position:relative">
+            <div style="position:absolute; bottom:10px; left:0; right:0; text-align:center; font-size:12px; font-weight:700; color:white; letter-spacing:1.5px; text-transform:uppercase">TAEG</div>
           </div>
-          <div style="font-size:11px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:#6B7280">Mutuo attuale</div>
+          <div style="font-size:13px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:#6B7280">Mutuo attuale</div>
         </div>
-        <!-- Arrow -->
-        <div style="font-size:50px; color:#D88B0A; align-self:center; padding-bottom:50px">→</div>
-        <!-- New TAEG -->
-        <div style="flex:1; max-width:160px; display:flex; flex-direction:column; align-items:center; gap:10px">
-          <div style="font-family:'Fraunces', serif; font-size:30px; font-weight:700; color:#D88B0A">3,1%</div>
-          <div style="width:100%; height:90px; background:linear-gradient(180deg, #F5A623, #D88B0A); border-radius:10px 10px 4px 4px; box-shadow:0 8px 20px rgba(245,166,35,0.35); position:relative">
-            <div style="position:absolute; bottom:8px; left:0; right:0; text-align:center; font-size:11px; font-weight:700; color:#1B2D55; letter-spacing:1px; text-transform:uppercase">TAEG</div>
+        <!-- Arrow centered -->
+        <div style="font-size:60px; color:#D88B0A; align-self:center; padding-bottom:60px; font-weight:700">→</div>
+        <!-- New TAEG bar (shorter) -->
+        <div style="flex:1; max-width:170px; display:flex; flex-direction:column; align-items:center; gap:12px">
+          <div style="font-family:'Fraunces', serif; font-size:38px; font-weight:800; color:#D88B0A; line-height:1">3,1%</div>
+          <div style="width:100%; height:130px; background:linear-gradient(180deg, #F5A623, #D88B0A); border-radius:12px 12px 4px 4px; box-shadow:0 8px 20px rgba(245,166,35,0.35); position:relative">
+            <div style="position:absolute; bottom:10px; left:0; right:0; text-align:center; font-size:12px; font-weight:700; color:#1B2D55; letter-spacing:1.5px; text-transform:uppercase">TAEG</div>
           </div>
-          <div style="font-size:11px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:#D88B0A">Dopo surroga</div>
+          <div style="font-size:13px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:#D88B0A">Dopo surroga</div>
         </div>
       </div>
-      <div style="margin-top:24px; padding-top:20px; border-top:1px solid rgba(27,45,85,0.08); text-align:center">
-        <div class="tiny muted" style="letter-spacing:2px; text-transform:uppercase">Risparmio sull'ammortamento residuo</div>
-        <div class="h-2 accent mt-xs" style="color:var(--gold-deep)">+18.000€*</div>
-        <div class="tiny muted mt-xs" style="font-size:11px; opacity:0.6">*esempio indicativo, varia con importo, durata e differenza di TAEG</div>
+      <div style="margin-top:28px; padding-top:24px; border-top:1px solid rgba(27,45,85,0.08); text-align:center">
+        <div style="font-size:12px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:#6B7280">Risparmio sull'ammortamento residuo</div>
+        <div style="font-family:'Fraunces',serif; font-weight:800; font-size:64px; color:#D88B0A; line-height:1; margin-top:8px">+18.000€<span style="font-size:32px; vertical-align:top">*</span></div>
+        <div style="font-size:12px; color:#9CA3AF; margin-top:8px">*esempio indicativo, varia con importo, durata e differenza di TAEG</div>
       </div>
     </div>
   </div>
@@ -1138,6 +1137,7 @@
 
 <!-- 5.5 CTA -->
 <section class="slide gold" data-out="carosello-05-surroga/05-cta">
+  <div class="carousel-thread "></div>
   <div class="pattern-dots" style="opacity:0.4"></div>
   <div class="content center" style="text-align:center; align-items:center">
     <span class="eyebrow on-gold">Vediamo se conviene</span>
@@ -1165,6 +1165,7 @@
 
 <!-- 6.1 COVER -->
 <section class="slide dark" data-out="carosello-06-3-step/01-cover">
+  <div class="carousel-thread dim"></div>
   <div class="pattern-dots"></div>
   <div class="pattern-topo"></div>
   <div class="accent-ring-br"></div>
@@ -1191,9 +1192,11 @@
   </div>
 </section>
 
-<!-- 6.2 STEP 1 -->
+<!-- 6.2 STEP 1 (big numeral + form mockup below) -->
 <section class="slide light" data-out="carosello-06-3-step/02-step-1">
+  <div class="carousel-thread "></div>
   <div class="pattern-dots on-light"></div>
+  <div class="accent-circle" style="top:-150px; right:-150px; width:400px; height:400px; opacity:0.4"></div>
   <div class="content">
     <span class="eyebrow">Step 01</span>
     <div class="row mt-md" style="align-items:flex-start; gap:36px">
@@ -1201,6 +1204,31 @@
       <div style="flex:1; padding-top:32px">
         <h2 class="h-2">Inserisci<br>pochi dati.</h2>
         <p class="lead muted mt-md">Importo, durata, finalità.<br>Bastano due minuti.</p>
+      </div>
+    </div>
+
+    <!-- Form mockup centered -->
+    <div style="display:flex; justify-content:center; margin-top:36px">
+      <div style="width:560px; padding:32px 36px; background:white; border:1px solid rgba(27,45,85,0.08); border-radius:22px; box-shadow:0 12px 40px rgba(27,45,85,0.08)">
+        <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:18px">
+          <img src="./assets/credipass-logo.webp" alt="Credipass" style="height:22px" />
+          <div style="font-size:11px; font-weight:700; color:#10B981; background:#D1FAE5; padding:5px 12px; border-radius:99px; letter-spacing:1px; text-transform:uppercase">Step 1/3</div>
+        </div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px">
+          <div>
+            <div style="font-size:11px; font-weight:700; color:#6B7280; letter-spacing:1px; text-transform:uppercase">Importo</div>
+            <div style="margin-top:8px; padding:14px 18px; background:#F8F7F4; border-radius:12px; font-family:'Fraunces',serif; font-size:22px; font-weight:700; color:#1B2D55">€ 185.000</div>
+          </div>
+          <div>
+            <div style="font-size:11px; font-weight:700; color:#6B7280; letter-spacing:1px; text-transform:uppercase">Durata</div>
+            <div style="margin-top:8px; padding:14px 18px; background:#F8F7F4; border-radius:12px; font-family:'Fraunces',serif; font-size:22px; font-weight:700; color:#1B2D55">25 anni</div>
+          </div>
+          <div style="grid-column:1/-1">
+            <div style="font-size:11px; font-weight:700; color:#6B7280; letter-spacing:1px; text-transform:uppercase">Finalità</div>
+            <div style="margin-top:8px; padding:14px 18px; background:#F8F7F4; border-radius:12px; font-family:'Manrope',sans-serif; font-size:16px; font-weight:600; color:#1B2D55">Acquisto prima casa</div>
+          </div>
+        </div>
+        <div style="margin-top:18px; padding:14px; background:linear-gradient(135deg, #F5A623, #D88B0A); border-radius:12px; text-align:center; color:#1B2D55; font-family:'Manrope',sans-serif; font-weight:700; font-size:14px">Continua →</div>
       </div>
     </div>
   </div>
@@ -1217,6 +1245,7 @@
 
 <!-- 6.3 STEP 2 (layout matched to step-1/step-3: big numeral top + tablet bottom) -->
 <section class="slide dark" data-out="carosello-06-3-step/03-step-2">
+  <div class="carousel-thread dim"></div>
   <div class="pattern-dots"></div>
   <div class="glow bl"></div>
   <div class="content" style="padding-bottom:140px">
@@ -1303,9 +1332,11 @@
   </div>
 </section>
 
-<!-- 6.4 STEP 3 -->
+<!-- 6.4 STEP 3 (big numeral + winning-bank chosen card below) -->
 <section class="slide light" data-out="carosello-06-3-step/04-step-3">
+  <div class="carousel-thread "></div>
   <div class="pattern-dots on-light"></div>
+  <div class="accent-circle" style="bottom:-150px; left:-150px; width:400px; height:400px; opacity:0.4"></div>
   <div class="content">
     <span class="eyebrow">Step 03</span>
     <div class="row mt-md" style="align-items:flex-start; gap:36px">
@@ -1313,6 +1344,40 @@
       <div style="flex:1; padding-top:32px">
         <h2 class="h-2">Scegli<br>la soluzione.</h2>
         <p class="lead muted mt-md">Ti propongo la combinazione migliore.<br>Ti seguo fino al rogito.</p>
+      </div>
+    </div>
+
+    <!-- Winning offer card -->
+    <div style="display:flex; justify-content:center; margin-top:36px">
+      <div style="width:580px; padding:32px 36px; background:white; border:2px solid #F5A623; border-radius:22px; box-shadow:0 16px 44px rgba(245,166,35,0.18); position:relative">
+        <div style="position:absolute; top:-14px; left:32px; padding:6px 14px; background:linear-gradient(135deg, #F5A623, #D88B0A); border-radius:99px; color:#1B2D55; font-family:'Manrope',sans-serif; font-weight:800; font-size:12px; letter-spacing:1.5px; text-transform:uppercase">★ Migliore per te</div>
+        <div style="display:flex; align-items:center; justify-content:space-between; margin-top:8px">
+          <div>
+            <div style="font-family:'Fraunces',serif; font-weight:700; font-size:26px; color:#1B2D55">Banca selezionata</div>
+            <div style="font-size:12px; font-weight:700; color:#6B7280; letter-spacing:1px; text-transform:uppercase; margin-top:4px">Tasso fisso · 25 anni</div>
+          </div>
+          <img src="./assets/credipass-logo.webp" alt="Credipass" style="height:22px" />
+        </div>
+        <div style="margin-top:24px; display:grid; grid-template-columns:1fr 1fr 1fr; gap:14px">
+          <div style="padding:14px; background:#F8F7F4; border-radius:12px; text-align:center">
+            <div style="font-size:10px; font-weight:700; color:#6B7280; letter-spacing:1px; text-transform:uppercase">TAN</div>
+            <div style="font-family:'Fraunces',serif; font-weight:800; font-size:24px; color:#1B2D55; margin-top:4px">2,65%</div>
+          </div>
+          <div style="padding:14px; background:linear-gradient(135deg, #F5A623, #D88B0A); border-radius:12px; text-align:center">
+            <div style="font-size:10px; font-weight:700; color:rgba(27,45,85,0.7); letter-spacing:1px; text-transform:uppercase">TAEG</div>
+            <div style="font-family:'Fraunces',serif; font-weight:800; font-size:24px; color:#1B2D55; margin-top:4px">2,89%</div>
+          </div>
+          <div style="padding:14px; background:#F8F7F4; border-radius:12px; text-align:center">
+            <div style="font-size:10px; font-weight:700; color:#6B7280; letter-spacing:1px; text-transform:uppercase">Rata</div>
+            <div style="font-family:'Fraunces',serif; font-weight:800; font-size:24px; color:#1B2D55; margin-top:4px">€ 842</div>
+          </div>
+        </div>
+        <div style="margin-top:18px; padding-top:18px; border-top:1px solid rgba(27,45,85,0.06); display:flex; align-items:center; gap:10px">
+          <div style="width:24px; height:24px; border-radius:50%; background:#10B981; display:flex; align-items:center; justify-content:center">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div style="font-size:13px; font-weight:600; color:#1B2D55">Seguita da Riccardo fino al rogito</div>
+        </div>
       </div>
     </div>
   </div>
@@ -1329,6 +1394,7 @@
 
 <!-- 6.5 CTA -->
 <section class="slide gold" data-out="carosello-06-3-step/05-cta">
+  <div class="carousel-thread "></div>
   <div class="pattern-dots" style="opacity:0.4"></div>
   <div class="content center" style="text-align:center; align-items:center">
     <span class="eyebrow on-gold">Inizia ora</span>
@@ -1356,6 +1422,7 @@
 
 <!-- 7.1 COVER -->
 <section class="slide dark" data-out="carosello-07-inpdap/01-cover">
+  <div class="carousel-thread dim"></div>
   <div class="pattern-dots"></div>
   <div class="pattern-topo"></div>
   <div class="accent-ring-br"></div>
@@ -1384,6 +1451,7 @@
 
 <!-- 7.2 MUTUI -->
 <section class="slide light" data-out="carosello-07-inpdap/02-mutui">
+  <div class="carousel-thread "></div>
   <div class="pattern-dots on-light"></div>
   <div class="content">
     <span class="eyebrow">Mutui alternativi a INPDAP</span>
@@ -1407,6 +1475,7 @@
 
 <!-- 7.3 PRESTITI -->
 <section class="slide dark" data-out="carosello-07-inpdap/03-prestiti">
+  <div class="carousel-thread dim"></div>
   <div class="pattern-dots"></div>
   <div class="glow bl"></div>
   <div class="content">
@@ -1431,6 +1500,7 @@
 
 <!-- 7.4 CTA -->
 <section class="slide gold" data-out="carosello-07-inpdap/04-cta">
+  <div class="carousel-thread "></div>
   <div class="pattern-dots" style="opacity:0.4"></div>
   <div class="content center" style="text-align:center; align-items:center">
     <span class="eyebrow on-gold">Confronto gratuito</span>
@@ -1458,6 +1528,7 @@
 
 <!-- S01 — Pull quote -->
 <section class="slide dark" data-out="single/01-quote-mutuo-giusto">
+  <div class="carousel-thread dim"></div>
   <div class="pattern-dots"></div>
   <div class="glow tr"></div>
   <div class="content center">
@@ -1479,18 +1550,20 @@
   </div>
 </section>
 
-<!-- S02 — Stat 100% LTV (con donut gauge) -->
+<!-- S02 — Stat 100% LTV (donut MOLTO grande) -->
 <section class="slide dark" data-out="single/02-stat-100-percent">
+  <div class="carousel-thread dim"></div>
   <div class="pattern-dots"></div>
   <div class="glow center"></div>
-  <div class="content center" style="align-items:center; text-align:center">
+  <div class="accent-ring-br" style="bottom:-200px; right:-200px; opacity:0.5"></div>
+  <div class="content center" style="align-items:center; text-align:center; padding-top:80px">
     <span class="eyebrow on-dark">Mutuo prima casa · Under 36</span>
 
-    <!-- Donut gauge -->
-    <div style="position:relative; width:380px; height:380px; margin-top:24px">
+    <!-- Donut gauge enlarged -->
+    <div style="position:relative; width:640px; height:640px; margin-top:32px">
       <svg viewBox="0 0 200 200" style="width:100%; height:100%; transform:rotate(-90deg)">
-        <circle cx="100" cy="100" r="84" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="18"/>
-        <circle cx="100" cy="100" r="84" fill="none" stroke="url(#gold-grad-s02)" stroke-width="18" stroke-linecap="round"
+        <circle cx="100" cy="100" r="84" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="14"/>
+        <circle cx="100" cy="100" r="84" fill="none" stroke="url(#gold-grad-s02)" stroke-width="14" stroke-linecap="round"
                 stroke-dasharray="527.8" stroke-dashoffset="0"/>
         <defs>
           <linearGradient id="gold-grad-s02" x1="0" y1="0" x2="1" y2="1">
@@ -1500,13 +1573,13 @@
         </defs>
       </svg>
       <div style="position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center">
-        <div style="font-family:'Fraunces',serif; font-weight:800; font-size:120px; color:#F7BE53; line-height:1; letter-spacing:-4px">100<span style="font-size:60px; vertical-align:super">%</span></div>
-        <div style="margin-top:8px; font-size:13px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:rgba(255,255,255,0.6)">LTV finanziabile</div>
+        <div style="font-family:'Fraunces',serif; font-weight:800; font-size:220px; color:#F7BE53; line-height:1; letter-spacing:-8px">100<span style="font-size:110px; vertical-align:super">%</span></div>
+        <div style="margin-top:14px; font-size:20px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:rgba(255,255,255,0.7)">LTV finanziabile</div>
       </div>
     </div>
 
-    <p class="body mt-md" style="font-size:24px; max-width:760px"><strong style="color:#F7BE53">Fino al 100% del valore</strong><br>dell'immobile per i giovani under 36.</p>
-    <p class="small muted mt-md" style="max-width:680px; opacity:0.55">Grazie ai fondi pubblici di garanzia Consap.<br>Verifico in 5 minuti se rientri nei requisiti.</p>
+    <p class="body mt-md" style="font-size:30px; max-width:820px; margin-top:24px"><strong style="color:#F7BE53">Fino al 100% del valore</strong><br>dell'immobile per i giovani under 36.</p>
+    <p class="body muted mt-md" style="max-width:760px; opacity:0.6; font-size:20px">Grazie ai fondi pubblici di garanzia Consap.</p>
   </div>
   <div class="brand-strip">
     <div class="brand-mark">
@@ -1521,6 +1594,7 @@
 
 <!-- S03 — 40+ banche (con griglia di banche stilizzate) -->
 <section class="slide light" data-out="single/03-stat-40-banche">
+  <div class="carousel-thread "></div>
   <div class="pattern-dots on-light"></div>
   <div class="content center" style="align-items:center; text-align:center">
     <span class="eyebrow">Rete Credipass</span>
@@ -1577,15 +1651,17 @@
   </div>
 </section>
 
-<!-- S04 — 24h esito prestito (con orologio SVG grande) -->
+<!-- S04 — 24h esito prestito (orologio MOLTO grande) -->
 <section class="slide dark" data-out="single/04-stat-24h">
+  <div class="carousel-thread dim"></div>
   <div class="pattern-dots"></div>
   <div class="glow bl"></div>
-  <div class="content center" style="align-items:center; text-align:center">
+  <div class="accent-ring-br" style="opacity:0.5"></div>
+  <div class="content center" style="align-items:center; text-align:center; padding-top:80px">
     <span class="eyebrow on-dark">Prestito Personale Credipass</span>
 
-    <!-- Clock SVG -->
-    <div style="position:relative; width:360px; height:360px; margin-top:24px">
+    <!-- Clock SVG enlarged -->
+    <div style="position:relative; width:600px; height:600px; margin-top:32px">
       <svg viewBox="0 0 200 200" style="width:100%; height:100%">
         <defs>
           <radialGradient id="clock-bg" cx="0.3" cy="0.3" r="0.8">
@@ -1641,6 +1717,7 @@
 
 <!-- S05 — Did you know · Surroga (4 card costi + cta) -->
 <section class="slide light" data-out="single/05-did-you-know-surroga">
+  <div class="carousel-thread "></div>
   <div class="pattern-dots on-light"></div>
   <div class="content">
     <span class="eyebrow">Lo sapevi?</span>
@@ -1687,6 +1764,7 @@
 
 <!-- S06 — Did you know · Cessione anche con problemi (con phone mockup) -->
 <section class="slide dark" data-out="single/06-did-you-know-quinto">
+  <div class="carousel-thread dim"></div>
   <div class="pattern-dots"></div>
   <div class="pattern-topo"></div>
   <div class="accent-ring-br" style="bottom:-200px; right:-200px; opacity:0.4"></div>
@@ -1739,6 +1817,7 @@
 
 <!-- S07 — Mutuo Liquidità singolo -->
 <section class="slide light" data-out="single/07-mutuo-liquidita">
+  <div class="carousel-thread "></div>
   <div class="pattern-dots on-light"></div>
   <div class="content">
     <span class="eyebrow">Mutuo Liquidità</span>
@@ -1764,6 +1843,7 @@
 
 <!-- S08 — Cessione del Quinto Medici Convenzionati -->
 <section class="slide dark" data-out="single/08-quinto-medici">
+  <div class="carousel-thread dim"></div>
   <div class="pattern-dots"></div>
   <div class="glow tr"></div>
   <div class="content">
@@ -1788,6 +1868,7 @@
 
 <!-- S09 — Mutuo Acquisto Immobili Commerciali -->
 <section class="slide light" data-out="single/09-mutuo-commerciale">
+  <div class="carousel-thread "></div>
   <div class="pattern-dots on-light"></div>
   <div class="content">
     <span class="eyebrow">Mutuo Immobili Commerciali</span>
@@ -1814,15 +1895,25 @@
 
 <!-- S10 — OAM badge -->
 <section class="slide dark" data-out="single/10-oam-badge">
+  <div class="carousel-thread dim"></div>
   <div class="pattern-dots"></div>
   <div class="glow center"></div>
-  <div class="content center" style="align-items:center; text-align:center">
-    <div class="icon-badge outline" style="width:140px; height:300px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:64px; height:64px"><path d="M12 2l2.4 2.4 3.4-.4.4 3.4L20.6 12l-2.4 2.4.4 3.4-3.4-.4L12 20.6 9.6 18.2l-3.4.4-.4-3.4L3.4 12l2.4-2.4-.4-3.4 3.4.4z"/><polyline points="9 12 11 14 15 10"/></svg></div>
-    <h2 class="h-1 mt-lg" style="color:white">Iscritto <span class="accent">OAM.</span></h2>
-    <p class="lead muted mt-md" style="max-width:760px">Organismo Agenti e Mediatori,<br>l'ente pubblico vigilato da Banca d'Italia<br>che certifica i mediatori creditizi.</p>
+  <div class="accent-ring-br" style="opacity:0.4"></div>
+  <div class="content center" style="align-items:center; text-align:center; padding-top:100px">
+    <!-- Big OAM seal -->
+    <div style="position:relative; width:440px; height:440px; display:flex; align-items:center; justify-content:center">
+      <div style="position:absolute; inset:0; border-radius:50%; border:3px dashed rgba(247,190,83,0.4)"></div>
+      <div style="position:absolute; inset:30px; border-radius:50%; border:4px solid #F7BE53; box-shadow:0 0 60px rgba(245,166,35,0.4)"></div>
+      <div style="position:absolute; inset:60px; border-radius:50%; background:linear-gradient(135deg, #F7BE53, #D88B0A); display:flex; align-items:center; justify-content:center; flex-direction:column; box-shadow:inset 0 4px 12px rgba(255,255,255,0.25), 0 12px 32px rgba(0,0,0,0.3)">
+        <svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="#1B2D55" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 2.4 3.4-.4.4 3.4L20.6 12l-2.4 2.4.4 3.4-3.4-.4L12 20.6 9.6 18.2l-3.4.4-.4-3.4L3.4 12l2.4-2.4-.4-3.4 3.4.4z"/><polyline points="9 12 11 14 15 10"/></svg>
+        <div style="font-family:'Fraunces',serif; font-weight:800; font-size:48px; color:#1B2D55; margin-top:12px; letter-spacing:4px">OAM</div>
+      </div>
+    </div>
+    <h2 class="h-display mt-lg" style="color:white; font-size:96px; margin-top:48px">Iscritto <span class="accent">OAM.</span></h2>
+    <p class="lead muted mt-md" style="max-width:780px; font-size:26px">Organismo Agenti e Mediatori<br>vigilato da Banca d'Italia.</p>
     <div class="chip-row mt-lg" style="justify-content:center">
-      <span class="chip">Vigilato Banca d'Italia</span>
-      <span class="chip">Certificazione professionale</span>
+      <span class="chip" style="font-size:16px; padding:14px 24px">Vigilato Banca d'Italia</span>
+      <span class="chip" style="font-size:16px; padding:14px 24px">Certificazione professionale</span>
     </div>
   </div>
   <div class="brand-strip">
@@ -1836,13 +1927,27 @@
   </div>
 </section>
 
-<!-- S11 — Credipass partner -->
+<!-- S11 — Credipass partner (logo ENORME + 3 stat row) -->
 <section class="slide light" data-out="single/11-credipass-partner">
+  <div class="carousel-thread "></div>
   <div class="pattern-dots on-light"></div>
-  <div class="content center" style="align-items:center; text-align:center">
-    <img src="./assets/credipass-logo.webp" alt="Credipass" style="height:130px; width:auto; margin-bottom:8px" />
-    <h2 class="h-1 mt-lg">Affiliato <span class="accent">ufficiale.</span></h2>
-    <p class="lead muted mt-md" style="max-width:760px">Una delle principali reti italiane<br>di mediazione creditizia.<br><strong>40+ istituti partner</strong>, migliaia di consulenti certificati.</p>
+  <div class="accent-circle" style="top:-200px; right:-200px; width:480px; height:480px; opacity:0.4"></div>
+  <div class="content center" style="align-items:center; text-align:center; padding-top:60px">
+    <!-- HUGE Credipass logo -->
+    <img src="./assets/credipass-logo.webp" alt="Credipass" style="height:240px; width:auto; margin-bottom:24px; filter:drop-shadow(0 16px 40px rgba(27,45,85,0.18))" />
+    <h2 class="h-display" style="font-size:112px; line-height:1.0">Affiliato<br><span class="accent">ufficiale.</span></h2>
+    <p class="lead muted mt-md" style="max-width:780px; font-size:26px">Una delle principali reti italiane<br>di mediazione creditizia.</p>
+    <!-- Big stat row -->
+    <div style="display:flex; gap:24px; margin-top:48px">
+      <div style="flex:1; padding:32px 24px; background:white; border:1px solid rgba(27,45,85,0.08); border-radius:22px; min-width:200px; box-shadow:0 8px 24px rgba(27,45,85,0.06)">
+        <div style="font-family:'Fraunces',serif; font-weight:800; font-size:56px; color:#D88B0A; line-height:1">40+</div>
+        <div style="font-size:14px; font-weight:700; color:#6B7280; letter-spacing:1.5px; text-transform:uppercase; margin-top:8px">Istituti partner</div>
+      </div>
+      <div style="flex:1; padding:32px 24px; background:white; border:1px solid rgba(27,45,85,0.08); border-radius:22px; min-width:200px; box-shadow:0 8px 24px rgba(27,45,85,0.06)">
+        <div style="font-family:'Fraunces',serif; font-weight:800; font-size:56px; color:#D88B0A; line-height:1">1000+</div>
+        <div style="font-size:14px; font-weight:700; color:#6B7280; letter-spacing:1.5px; text-transform:uppercase; margin-top:8px">Consulenti certificati</div>
+      </div>
+    </div>
   </div>
   <div class="brand-strip">
     <div class="brand-mark">
@@ -1857,14 +1962,21 @@
 
 <!-- S12 — CTA Preventivo -->
 <section class="slide gold" data-out="single/12-cta-preventivo">
+  <div class="carousel-thread "></div>
   <div class="pattern-dots" style="opacity:0.4"></div>
-  <div class="content center" style="align-items:center; text-align:center">
-    <span class="eyebrow on-gold">Preventivo online</span>
-    <h2 class="h-display mt-md" style="color:var(--navy)">Gratuito.<br><em style="font-style:italic">Senza impegno.</em></h2>
-    <p class="lead mt-md" style="color:rgba(27,45,85,0.78); max-width:760px">Pochi dati, 60 secondi.<br>Ti rispondo personalmente entro 24 ore.</p>
-    <div style="display:inline-flex; align-items:center; gap:14px; padding:18px 26px; background:rgba(27,45,85,0.06); border:1px solid rgba(27,45,85,0.1); border-radius:999px">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1B2D55" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
-      <span style="font-family:'Manrope',sans-serif; font-weight:700; font-size:18px; color:#1B2D55; letter-spacing:0.3px">Link in bio · scrivi a Riccardo</span>
+  <div style="position:absolute; inset:0; background:radial-gradient(circle at 50% 40%, rgba(255,255,255,0.25) 0%, transparent 50%)"></div>
+  <div class="content center" style="align-items:center; text-align:center; padding-top:80px">
+    <span class="eyebrow on-gold" style="font-size:22px">Preventivo online</span>
+    <h2 class="h-display mt-md" style="color:var(--navy); font-size:160px; line-height:0.95">Gratuito.<br><em style="font-style:italic">Senza impegno.</em></h2>
+    <p class="lead mt-md" style="color:rgba(27,45,85,0.85); max-width:820px; font-size:32px; font-weight:500">Pochi dati, <strong>60 secondi</strong>.<br>Risposta entro 24 ore.</p>
+    <div style="display:flex; gap:14px; margin-top:48px">
+      <div style="padding:18px 28px; background:rgba(27,45,85,0.08); border:1px solid rgba(27,45,85,0.18); border-radius:999px; display:flex; align-items:center; gap:10px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1B2D55" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span style="font-family:'Manrope',sans-serif; font-weight:700; font-size:18px; color:#1B2D55">60 secondi</span></div>
+      <div style="padding:18px 28px; background:rgba(27,45,85,0.08); border:1px solid rgba(27,45,85,0.18); border-radius:999px; display:flex; align-items:center; gap:10px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1B2D55" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg><span style="font-family:'Manrope',sans-serif; font-weight:700; font-size:18px; color:#1B2D55">Zero costi</span></div>
+      <div style="padding:18px 28px; background:rgba(27,45,85,0.08); border:1px solid rgba(27,45,85,0.18); border-radius:999px; display:flex; align-items:center; gap:10px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1B2D55" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span style="font-family:'Manrope',sans-serif; font-weight:700; font-size:18px; color:#1B2D55">Senza vincoli</span></div>
+    </div>
+    <div style="margin-top:36px; display:inline-flex; align-items:center; gap:14px; padding:18px 26px; background:#1B2D55; border-radius:999px">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F7BE53" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+      <span style="font-family:'Manrope',sans-serif; font-weight:700; font-size:18px; color:white; letter-spacing:0.3px">Link in bio · scrivi a Riccardo</span>
     </div>
   </div>
   <div class="brand-strip">
@@ -1880,6 +1992,7 @@
 
 <!-- S13 — Consulenza gratuita (con stat ring + 3 chips floating) -->
 <section class="slide dark" data-out="single/13-consulenza-gratuita">
+  <div class="carousel-thread dim"></div>
   <div class="pattern-dots"></div>
   <div class="pattern-topo"></div>
   <div class="accent-circle" style="top:-100px; left:-100px; width:340px; height:340px; opacity:0.5"></div>
@@ -1916,6 +2029,7 @@
 
 <!-- S14 — Quote indipendenza -->
 <section class="slide light" data-out="single/14-quote-indipendenza">
+  <div class="carousel-thread "></div>
   <div class="pattern-dots on-light"></div>
   <div class="content center">
     <div class="quote-mark" style="color:var(--gold-deep); opacity:0.4">"</div>
@@ -1938,6 +2052,7 @@
 
 <!-- S15 — Disclaimer TAEG (trasparenza) -->
 <section class="slide dark" data-out="single/15-trasparenza-taeg">
+  <div class="carousel-thread dim"></div>
   <div class="pattern-dots"></div>
   <div class="content">
     <span class="eyebrow on-dark">Trasparenza · Credipass</span>
@@ -1966,6 +2081,7 @@
 
 <!-- 8.1 COVER (with handshake illustration bottom) -->
 <section class="slide dark" data-out="carosello-08-giuliano/01-cover">
+  <div class="carousel-thread dim"></div>
   <div class="pattern-dots"></div>
   <div class="pattern-topo"></div>
   <div class="accent-ring-br" style="bottom:-240px; right:-240px"></div>
@@ -1978,36 +2094,41 @@
     </p>
   </div>
 
-  <!-- Handshake icon: Lucide-style, large, gold on navy. Recognizable. -->
-  <div style="position:absolute; left:0; right:0; bottom:200px; display:flex; flex-direction:column; align-items:center; gap:24px; pointer-events:none">
-    <!-- Radial glow behind -->
-    <div style="position:absolute; width:520px; height:300px; background:radial-gradient(ellipse at center, rgba(245,166,35,0.30) 0%, transparent 65%); top:-30px"></div>
-    <svg width="320" height="320" viewBox="0 0 64 64" fill="none" stroke="#F7BE53" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="position:relative; z-index:2; filter:drop-shadow(0 12px 24px rgba(245,166,35,0.35))">
-      <!-- LEFT forearm (long sleeve) -->
-      <path d="M2 38 L10 32 L20 30" stroke-width="3"/>
-      <path d="M2 44 L18 36" stroke-width="3"/>
-      <!-- RIGHT forearm -->
-      <path d="M62 38 L54 32 L44 30" stroke-width="3"/>
-      <path d="M62 44 L46 36" stroke-width="3"/>
-      <!-- LEFT hand (cuff + palm) -->
-      <path d="M14 28 L24 22 L34 28 L34 38 L28 42 L18 36 Z" fill="rgba(247,190,83,0.15)"/>
-      <!-- LEFT fingers wrapping (visible on the right side of the clasp) -->
-      <path d="M34 28 L40 26 L42 30 L40 32 Z" fill="rgba(247,190,83,0.20)"/>
-      <path d="M40 30 L44 28 L46 32 L44 34 Z" fill="rgba(247,190,83,0.20)"/>
-      <!-- RIGHT hand mirror -->
-      <path d="M50 28 L40 22 L30 28 L30 38 L36 42 L46 36 Z" fill="rgba(247,190,83,0.15)"/>
-      <!-- RIGHT thumb on top -->
-      <path d="M30 28 Q 28 24 32 22 Q 36 24 36 28 Z" fill="rgba(247,190,83,0.30)" stroke-width="2"/>
-      <!-- Center vertical accent: the clasp -->
-      <line x1="32" y1="20" x2="32" y2="44" stroke="#F5A623" stroke-width="0.8" opacity="0.5"/>
-      <!-- Small star burst above -->
-      <g transform="translate(32 14)" stroke="#F7BE53" stroke-width="1.5" opacity="0.9">
-        <line x1="0" y1="-4" x2="0" y2="-8"/>
-        <line x1="-4" y1="-2" x2="-7" y2="-4"/>
-        <line x1="4" y1="-2" x2="7" y2="-4"/>
-      </g>
-    </svg>
-    <div style="position:relative; z-index:2; padding:10px 20px; background:rgba(245,166,35,0.14); border:1px solid rgba(245,166,35,0.4); border-radius:999px; font-family:'Manrope',sans-serif; font-size:14px; font-weight:700; color:#F7BE53; letter-spacing:2px; text-transform:uppercase">Cliente · Mediatore · Banca</div>
+  <!-- Before/After story arc: red declined card + arrow + green approved card -->
+  <div style="position:absolute; left:96px; right:96px; bottom:200px; pointer-events:none">
+    <div style="display:flex; align-items:center; gap:20px; justify-content:center">
+      <!-- Banca decline card -->
+      <div style="flex:1; max-width:280px; padding:24px 22px; background:rgba(255,255,255,0.06); border:1px solid rgba(220,38,38,0.4); border-radius:18px; backdrop-filter:blur(8px); position:relative">
+        <div style="position:absolute; top:-12px; left:20px; padding:5px 12px; background:#B91C1C; border-radius:99px; font-family:'Manrope',sans-serif; font-weight:800; font-size:11px; color:white; letter-spacing:1.2px; text-transform:uppercase">Banca</div>
+        <div style="display:flex; align-items:center; gap:14px; margin-top:8px">
+          <div style="width:44px; height:44px; border-radius:50%; background:rgba(220,38,38,0.18); display:flex; align-items:center; justify-content:center; flex:none">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FCA5A5" stroke-width="3" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          </div>
+          <div>
+            <div style="font-family:'Fraunces',serif; font-weight:700; font-size:18px; color:white">Respinto</div>
+            <div style="font-size:11px; font-weight:600; color:rgba(255,255,255,0.55); letter-spacing:0.5px">Pratica non accolta</div>
+          </div>
+        </div>
+      </div>
+      <!-- Arrow -->
+      <div style="display:flex; flex-direction:column; align-items:center">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#F7BE53" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </div>
+      <!-- Credipass approve card -->
+      <div style="flex:1; max-width:280px; padding:24px 22px; background:rgba(245,166,35,0.12); border:1px solid rgba(245,166,35,0.55); border-radius:18px; backdrop-filter:blur(8px); position:relative; box-shadow:0 12px 36px rgba(245,166,35,0.18)">
+        <div style="position:absolute; top:-12px; left:20px; padding:5px 12px; background:linear-gradient(135deg, #F5A623, #D88B0A); border-radius:99px; font-family:'Manrope',sans-serif; font-weight:800; font-size:11px; color:#1B2D55; letter-spacing:1.2px; text-transform:uppercase">Credipass</div>
+        <div style="display:flex; align-items:center; gap:14px; margin-top:8px">
+          <div style="width:44px; height:44px; border-radius:50%; background:rgba(16,185,129,0.25); display:flex; align-items:center; justify-content:center; flex:none">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6EE7B7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div>
+            <div style="font-family:'Fraunces',serif; font-weight:700; font-size:18px; color:white">Approvato</div>
+            <div style="font-size:11px; font-weight:600; color:rgba(255,255,255,0.55); letter-spacing:0.5px">Mutuo + prestito spese</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center; margin-top:24px; padding:8px 18px; display:inline-flex; left:50%; position:relative; transform:translateX(-50%); background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.15); border-radius:999px; font-family:'Manrope',sans-serif; font-size:13px; font-weight:700; color:rgba(255,255,255,0.75); letter-spacing:2px; text-transform:uppercase">Scorri per la storia →</div>
   </div>
   <div class="brand-strip">
     <div class="brand-mark">
@@ -2081,6 +2202,7 @@
 
 <!-- 8.3 LA SUA BANCA — magazine: testo + laptop con portale banca -->
 <section class="slide dark" data-out="carosello-08-giuliano/03-banca">
+  <div class="carousel-thread dim"></div>
   <div class="mag-layout">
     <div class="col-text" style="background:linear-gradient(180deg, #1B2D55, #0C172C); color:white; position:relative">
       <div class="pattern-dots"></div>
@@ -2200,6 +2322,7 @@
 
 <!-- 8.5 PRIMA CONSULENZA — magazine + tablet con form analisi profilo -->
 <section class="slide dark" data-out="carosello-08-giuliano/05-consulenza">
+  <div class="carousel-thread dim"></div>
   <div class="mag-layout" style="grid-template-columns:0.95fr 1.05fr">
     <div class="col-text" style="background:linear-gradient(180deg, #1B2D55, #0C172C); color:white; position:relative">
       <div class="pattern-dots"></div>
@@ -2323,6 +2446,7 @@
 
 <!-- 8.7 NON SOLO IL MUTUO — magazine: testo + tablet con 2 pratiche affiancate -->
 <section class="slide dark" data-out="carosello-08-giuliano/07-prestito-extra">
+  <div class="carousel-thread dim"></div>
   <div class="mag-layout">
     <div class="col-text" style="background:linear-gradient(180deg, #1B2D55, #0C172C); color:white; position:relative">
       <div class="pattern-dots"></div>
@@ -2401,6 +2525,7 @@
 
 <!-- 8.8 CTA / QUOTE GIULIANO -->
 <section class="slide gold" data-out="carosello-08-giuliano/08-cta">
+  <div class="carousel-thread "></div>
   <div class="pattern-dots" style="opacity:0.4"></div>
   <div class="content center" style="align-items:center; text-align:center">
     <span class="eyebrow on-gold">L'esito</span>
@@ -2430,6 +2555,7 @@
 
 <!-- S16 — Domanda frequente -->
 <section class="slide light" data-out="single/16-faq-quanto-costa">
+  <div class="carousel-thread "></div>
   <div class="pattern-dots on-light"></div>
   <div class="content">
     <span class="eyebrow">Una domanda che ricevo spesso</span>

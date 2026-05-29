@@ -572,6 +572,29 @@ body { display: flex; flex-direction: column; align-items: center; gap: 40px; pa
   border-radius: 60px;
   filter: blur(40px);
 }
+
+/* ===== Carousel continuity primitive =====
+   A horizontal gold "thread" rendered at the very top of every slide.
+   On dark slides it's a gold gradient bar at low opacity; on light slides
+   the same bar in deep-gold. Reads as a continuous rail across the
+   carousel swipe. */
+.carousel-thread {
+  position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, transparent 0%, #F5A623 20%, #F7BE53 50%, #F5A623 80%, transparent 100%);
+  z-index: 5;
+}
+.carousel-thread.dim { opacity: 0.45; }
+
+/* Continuity dot: small gold dot positioned to "move" across slides
+   (cycle position via inline style). Acts as a visual cursor for the
+   reader, signalling progress + continuity. */
+.continuity-dot {
+  position: absolute; width: 14px; height: 14px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #F7BE53, #D88B0A);
+  box-shadow: 0 0 0 4px rgba(245,166,35,0.18), 0 4px 12px rgba(245,166,35,0.35);
+  z-index: 6;
+}
 .accent-ring-br {
   position: absolute; bottom: -180px; right: -180px;
   width: 480px; height: 480px;
